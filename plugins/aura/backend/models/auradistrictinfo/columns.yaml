@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: id
+        type: number
+    thumbnail:
+        label: thumbnail
+        type: partial
+    content:
+        label: content
+        type: text

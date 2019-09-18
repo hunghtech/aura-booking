@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Newletter
+
+# Model Form Field configuration
+form: $/aura/backend/models/newletter/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Newletter
+
+# Default redirect location
+defaultRedirect: aura/backend/newletter
+
+# Create page
+create:
+    title: Create Newletter
+    redirect: aura/backend/newletter/update/:id
+    redirectClose: aura/backend/newletter
+
+# Update page
+update:
+    title: Edit Newletter
+    redirect: aura/backend/newletter
+    redirectClose: aura/backend/newletter
+
+# Preview page
+preview:
+    title: Preview Newletter

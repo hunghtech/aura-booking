@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Banner
+
+# Model Form Field configuration
+form: $/aura/backend/models/banner/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Banner
+
+# Default redirect location
+defaultRedirect: aura/backend/banner
+
+# Create page
+create:
+    title: Create Banner
+    redirect: aura/backend/banner/update/:id
+    redirectClose: aura/backend/banner
+
+# Update page
+update:
+    title: Edit Banner
+    redirect: aura/backend/banner
+    redirectClose: aura/backend/banner
+
+# Preview page
+preview:
+    title: Preview Banner

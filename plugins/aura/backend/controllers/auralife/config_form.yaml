@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Aura Life
+
+# Model Form Field configuration
+form: $/aura/backend/models/auralife/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\AuraLife
+
+# Default redirect location
+defaultRedirect: aura/backend/auralife
+
+# Create page
+create:
+    title: Create Aura Life
+    redirect: aura/backend/auralife/update/:id
+    redirectClose: aura/backend/auralife
+
+# Update page
+update:
+    title: Edit Aura Life
+    redirect: aura/backend/auralife
+    redirectClose: aura/backend/auralife
+
+# Preview page
+preview:
+    title: Preview Aura Life

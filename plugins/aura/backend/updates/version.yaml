@@ -1,0 +1,37 @@
+1.0.1: 'First version of Backend'
+1.0.2:
+    - 'Created table aura_backend_banner'
+    - builder_table_create_aura_backend_banner.php
+1.0.3:
+    - 'Created table aura_backend_service'
+    - builder_table_create_aura_backend_service.php
+1.0.4:
+    - 'Created table aura_backend_store'
+    - builder_table_create_aura_backend_store.php
+1.0.5:
+    - 'Created table aura_backend_banner_store'
+    - builder_table_create_aura_backend_banner_store.php
+1.0.6:
+    - 'Created table aura_backend_room_type'
+    - builder_table_create_aura_backend_room_type.php
+1.0.7:
+    - 'Created table aura_backend_room_category'
+    - builder_table_create_aura_backend_room_category.php
+1.0.8:
+    - 'Created table aura_backend_room'
+    - builder_table_create_aura_backend_room.php
+1.0.9:
+    - 'Created table aura_backend_room_info'
+    - builder_table_create_aura_backend_room_info.php
+1.0.10:
+    - 'Created table aura_backend_room_service'
+    - builder_table_create_aura_backend_room_service.php
+1.0.11:
+    - 'Created table aura_backend_aura_life'
+    - builder_table_create_aura_backend_aura_life.php
+1.0.12:
+    - 'Created table aura_backend_aura_life_info'
+    - builder_table_create_aura_backend_aura_life_info.php
+1.0.13:
+    - 'Created table aura_backend_aura_district_info'
+    - builder_table_create_aura_backend_aura_district_info.php

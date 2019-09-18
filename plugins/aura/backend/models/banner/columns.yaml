@@ -1,0 +1,13 @@
+columns:
+    title:
+        label: title
+        type: text
+    title_image:
+        label: title_image
+        type: text
+    time_time:
+        label: time_time
+        type: text
+    image:
+        label: image
+        type: text

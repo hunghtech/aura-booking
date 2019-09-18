@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Store
+
+# Model Form Field configuration
+form: $/aura/backend/models/store/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Store
+
+# Default redirect location
+defaultRedirect: aura/backend/store
+
+# Create page
+create:
+    title: Create Store
+    redirect: aura/backend/store/update/:id
+    redirectClose: aura/backend/store
+
+# Update page
+update:
+    title: Edit Store
+    redirect: aura/backend/store
+    redirectClose: aura/backend/store
+
+# Preview page
+preview:
+    title: Preview Store

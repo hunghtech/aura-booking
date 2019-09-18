@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Aura District
+
+# Model Form Field configuration
+form: $/aura/backend/models/auradistrict/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\AuraDistrict
+
+# Default redirect location
+defaultRedirect: aura/backend/auradistrict
+
+# Create page
+create:
+    title: Create Aura District
+    redirect: aura/backend/auradistrict/update/:id
+    redirectClose: aura/backend/auradistrict
+
+# Update page
+update:
+    title: Edit Aura District
+    redirect: aura/backend/auradistrict
+    redirectClose: aura/backend/auradistrict
+
+# Preview page
+preview:
+    title: Preview Aura District

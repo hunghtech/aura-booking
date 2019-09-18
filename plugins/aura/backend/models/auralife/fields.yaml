@@ -1,0 +1,11 @@
+fields:
+    thumbnail1:
+        label: 'Hình ảnh 1'
+        mode: file
+        span: auto
+        type: mediafinder
+    thumbnail2:
+        label: 'Hình ảnh 2'
+        mode: image
+        span: auto
+        type: mediafinder

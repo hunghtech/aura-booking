@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Service
+
+# Model Form Field configuration
+form: $/aura/backend/models/service/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Service
+
+# Default redirect location
+defaultRedirect: aura/backend/service
+
+# Create page
+create:
+    title: Create Service
+    redirect: aura/backend/service/update/:id
+    redirectClose: aura/backend/service
+
+# Update page
+update:
+    title: Edit Service
+    redirect: aura/backend/service
+    redirectClose: aura/backend/service
+
+# Preview page
+preview:
+    title: Preview Service

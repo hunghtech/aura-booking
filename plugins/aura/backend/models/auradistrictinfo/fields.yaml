@@ -1,0 +1,11 @@
+fields:
+    thumbnail:
+        label: 'Hình ảnh'
+        mode: image
+        span: auto
+        type: mediafinder
+    content:
+        label: 'Nội dung'
+        size: ''
+        span: auto
+        type: textarea
