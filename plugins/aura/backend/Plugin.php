@@ -1,25 +1,27 @@
-<?php namespace Aura\Backend;
+<?php
+
+namespace Aura\Backend;
 
 use Backend;
 use System\Classes\PluginBase;
+use BackendMenu;
 
 /**
  * Backend Plugin Information File
  */
-class Plugin extends PluginBase
-{
+class Plugin extends PluginBase {
+
     /**
      * Returns information about this plugin.
      *
      * @return array
      */
-    public function pluginDetails()
-    {
+    public function pluginDetails() {
         return [
-            'name'        => 'Backend',
+            'name' => 'Backend',
             'description' => 'No description provided yet...',
-            'author'      => 'Aura',
-            'icon'        => 'icon-leaf'
+            'author' => 'Aura',
+            'icon' => 'icon-leaf'
         ];
     }
 
@@ -28,9 +30,8 @@ class Plugin extends PluginBase
      *
      * @return void
      */
-    public function register()
-    {
-
+    public function register() {
+        BackendMenu::registerContextSidenavPartial('Aura.Backend', 'backend', '~/plugins/aura/backend/partials/_sidenav.htm');
     }
 
     /**
@@ -38,9 +39,8 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function boot()
-    {
-
+    public function boot() {
+        
     }
 
     /**
@@ -48,11 +48,11 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerComponents()
-    {        
+    public function registerComponents() {
         return [
             'Aura\Backend\Components\Homepage' => 'homepage',
             'Aura\Backend\Components\Lang' => 'lang',
+            'Aura\Backend\Components\Menu' => 'menu',
         ];
     }
 
@@ -61,8 +61,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerPermissions()
-    {
+    public function registerPermissions() {
         return []; // Remove this line to activate
 
         return [
@@ -78,54 +77,68 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
-    {
+    public function registerNavigation() {
         return [
             'backend' => [
-                'label'       => 'Aura Booking',
-                'url'         => Backend::url('aura/backend/banner'),
-                'icon'        => 'icon-globe',
+                'label' => 'Aura Booking',
+                'url' => Backend::url('aura/backend/banner'),
+                'icon' => 'icon-globe',
                 'permissions' => ['aura.backend.*'],
-                'order'       => 500,
+                'order' => 500,
                 'sideMenu' => [
                     'banner' => [
                         'label' => 'Banner',
                         'icon' => 'icon-file-image-o',
                         'url' => Backend::url('aura/backend/banner'),
-                        'permissions' => ['aura.backend.*']
-                    ],
-                    'auradistrict' => [
-                        'label' => 'Aura District',
-                        'icon' => 'icon-smile-o',
-                        'url' => Backend::url('aura/backend/auradistrict'),
-                        'permissions' => ['aura.backend.*']
-                    ],
-                    'auralife' => [
-                        'label' => 'Cuộc sống tại Aura',
-                        'icon' => 'icon-life-ring',
-                        'url' => Backend::url('aura/backend/auralife'),
-                        'permissions' => ['aura.backend.*']
-                    ],
-                    'service' => [
-                        'label' => 'Dịch vụ',
-                        'icon' => 'icon-university',
-                        'url' => Backend::url('aura/backend/service'),
-                        'permissions' => ['aura.backend.*']
-                    ],
-                    'faq' => [
-                        'label' => 'FAQ',
-                        'icon' => 'icon-comments-o',
-                        'url' => Backend::url('aura/backend/faq'),
-                        'permissions' => ['aura.backend.*']
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin chung',
                     ],
                     'menu' => [
                         'label' => 'Menu',
                         'icon' => 'icon-sitemap',
                         'url' => Backend::url('aura/backend/menu'),
-                        'permissions' => ['aura.backend.*']
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin chung',
+                    ],
+                    'auradistrict' => [
+                        'label' => 'Aura District',
+                        'icon' => 'icon-smile-o',
+                        'url' => Backend::url('aura/backend/auradistrict'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Trang chủ',
+                    ],
+                    'auralife' => [
+                        'label' => 'Cuộc sống tại Aura',
+                        'icon' => 'icon-life-ring',
+                        'url' => Backend::url('aura/backend/auralife'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Trang chủ',
+                    ],
+                    'service' => [
+                        'label' => 'Dịch vụ',
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('aura/backend/service'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Aura',
+                    ],
+                    'faq' => [
+                        'label' => 'FAQ',
+                        'icon' => 'icon-comments-o',
+                        'url' => Backend::url('aura/backend/faq'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Aura',
                     ]
                 ]
             ],
         ];
     }
+
+    public function registerMarkupTags() {
+        return [
+            'filters' => [
+                'getChildrenMenu' => ['Aura\Backend\Classes\HelperClass', 'getChildrenMenu']
+            ]
+        ];
+    }
+
 }

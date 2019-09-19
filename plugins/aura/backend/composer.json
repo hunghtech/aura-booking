@@ -1,0 +1,20 @@
+{
+    "name": "aura/backend",
+    "description": "A plugin for management Aura booking",
+    "require": {
+        "owl/tagbox": "~1.0@dev"
+    },
+    "license": "Aura GNU",
+    "authors": [
+        {
+            "name": "Aura",
+            "email": "hungdn0502@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "classes/helper.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}

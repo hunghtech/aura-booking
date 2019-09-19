@@ -18,33 +18,12 @@ description = "Header of layout"
             </h1>
             <div class="d-flex nav_right">
                 <ul class="d-flex align-items-center list-nav-menu">
+                    {% for menu in menuList %}
                     <li class="nav_item">
-                        <a href="#" class="link_item">
-                            Dịch vụ
-                        </a>
-                        <ul class="submenu">
-                            <li>
-                                dịch vụ
-                            </li>
-                            <li>
-                                <a class="active" href="#">Co-Living</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Co-working
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="link_item">Địa điểm</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="link_item">Thành viên</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="link_item">Về Aura</a>
-                    </li>
+                        <a href="{{menu.link}}" class="link_item">{{menu.lang(language).title}}</a>
+                        {{menu.id|getChildrenMenu}}
+                    </li>                                        
+                    {% endfor %}
                     <li>
                         <a href="#" class="link_order_room">
                             <!--Đặt Phòng-->
