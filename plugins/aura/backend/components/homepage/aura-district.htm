@@ -1,0 +1,19 @@
+<div class="list_contain_slogan section">
+    <div class="container">
+        <h3>{{ 'Tại Aura District bạn sẽ'|_ }}:</h3>
+        <div class="row">
+            {% for item in auraDistricts %}
+            <div class="col-4">
+                <div class="slogan_item">
+                    <div class="img">
+                        <img src="/storage/app/media{{item.thumbnail}}" alt=""/>
+                    </div>
+                    <p>
+                        {{item.lang(language).content}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        size: ''
+        span: auto
+        type: textarea
+    icon:
+        label: Icon
+        mode: image
+        span: auto
+        type: mediafinder

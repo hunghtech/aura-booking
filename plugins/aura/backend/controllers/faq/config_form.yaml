@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Faq
+
+# Model Form Field configuration
+form: $/aura/backend/models/faq/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Faq
+
+# Default redirect location
+defaultRedirect: aura/backend/faq
+
+# Create page
+create:
+    title: Create Faq
+    redirect: aura/backend/faq/update/:id
+    redirectClose: aura/backend/faq
+
+# Update page
+update:
+    title: Edit Faq
+    redirect: aura/backend/faq
+    redirectClose: aura/backend/faq
+
+# Preview page
+preview:
+    title: Preview Faq

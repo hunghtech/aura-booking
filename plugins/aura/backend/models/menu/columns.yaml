@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: title
+        type: text
+    parent_id:
+        label: parent_id
+        type: number
+    link:
+        label: link
+        type: text

@@ -8,11 +8,10 @@ fields:
         label: 'Tiêu đề'
         span: auto
         type: text
-    time_time:
+    title_time:
         label: 'Tiêu đề giờ'
-        mode: file
         span: auto
-        type: mediafinder
+        type: text
     content:
         label: 'Nội dung'
         size: ''

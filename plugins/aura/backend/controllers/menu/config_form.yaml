@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Menu
+
+# Model Form Field configuration
+form: $/aura/backend/models/menu/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\Menu
+
+# Default redirect location
+defaultRedirect: aura/backend/menu
+
+# Create page
+create:
+    title: Create Menu
+    redirect: aura/backend/menu/update/:id
+    redirectClose: aura/backend/menu
+
+# Update page
+update:
+    title: Edit Menu
+    redirect: aura/backend/menu
+    redirectClose: aura/backend/menu
+
+# Preview page
+preview:
+    title: Preview Menu

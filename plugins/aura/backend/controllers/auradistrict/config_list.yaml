@@ -3,10 +3,10 @@
 # ===================================
 
 # Model List Column configuration
-list: $/aura/backend/models/auradistrict/columns.yaml
+list: $/aura/backend/models/auradistrictinfo/columns.yaml
 
 # Model Class name
-modelClass: Aura\Backend\Models\AuraDistrict
+modelClass: Aura\Backend\Models\AuraDistrictInfo
 
 # List Title
 title: Manage Aura Districts

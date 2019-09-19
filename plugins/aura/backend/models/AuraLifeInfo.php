@@ -15,7 +15,9 @@ class AuraLifeInfo extends Model
      */
     public $timestamps = false;
 
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
 
+    public $translatable = ['title'];
     /**
      * @var string The database table used by the model.
      */

@@ -56,7 +56,7 @@ return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => 3306,
-            'database'  => 'aura-2019',
+            'database'  => 'aura-booking-2019',
             'username'  => 'root',
             'password'  => '',
             'charset'   => 'utf8mb4',

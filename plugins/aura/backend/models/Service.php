@@ -14,6 +14,10 @@ class Service extends Model
      * @var string The database table used by the model.
      */
     public $table = 'aura_backend_service';
+    
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = ['title'];
 
     /**
      * @var array Validation rules

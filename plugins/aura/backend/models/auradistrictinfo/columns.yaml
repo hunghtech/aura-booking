@@ -5,6 +5,7 @@ columns:
     thumbnail:
         label: thumbnail
         type: partial
+        path: ~/plugins/aura/backend/models/auradistrictinfo/_thumbnail.htm
     content:
         label: content
         type: text

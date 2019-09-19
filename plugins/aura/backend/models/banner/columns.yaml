@@ -1,13 +1,15 @@
 columns:
     title:
-        label: title
+        label: 'Tiêu đề'
         type: text
     title_image:
-        label: title_image
-        type: text
-    time_time:
-        label: time_time
+        label: 'Tiêu đề Hình Ảnh'
+        type: partial
+        path: ~/plugins/aura/backend/models/banner/_title_image.htm
+    title_time:
+        label: 'Tiêu đề Giờ'
         type: text
     image:
-        label: image
-        type: text
+        label: 'Hình ảnh'
+        type: partial
+        path: ~/plugins/aura/backend/models/banner/_image.htm

@@ -49,11 +49,10 @@ class Plugin extends PluginBase
      * @return array
      */
     public function registerComponents()
-    {
-        return []; // Remove this line to activate
-
+    {        
         return [
-            'Aura\Backend\Components\MyComponent' => 'myComponent',
+            'Aura\Backend\Components\Homepage' => 'homepage',
+            'Aura\Backend\Components\Lang' => 'lang',
         ];
     }
 
@@ -98,13 +97,31 @@ class Plugin extends PluginBase
                     'auradistrict' => [
                         'label' => 'Aura District',
                         'icon' => 'icon-smile-o',
-                        'url' => Backend::url('aura/backend/auralife'),
+                        'url' => Backend::url('aura/backend/auradistrict'),
                         'permissions' => ['aura.backend.*']
                     ],
                     'auralife' => [
                         'label' => 'Cuộc sống tại Aura',
                         'icon' => 'icon-life-ring',
                         'url' => Backend::url('aura/backend/auralife'),
+                        'permissions' => ['aura.backend.*']
+                    ],
+                    'service' => [
+                        'label' => 'Dịch vụ',
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('aura/backend/service'),
+                        'permissions' => ['aura.backend.*']
+                    ],
+                    'faq' => [
+                        'label' => 'FAQ',
+                        'icon' => 'icon-comments-o',
+                        'url' => Backend::url('aura/backend/faq'),
+                        'permissions' => ['aura.backend.*']
+                    ],
+                    'menu' => [
+                        'label' => 'Menu',
+                        'icon' => 'icon-sitemap',
+                        'url' => Backend::url('aura/backend/menu'),
                         'permissions' => ['aura.backend.*']
                     ]
                 ]

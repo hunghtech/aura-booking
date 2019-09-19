@@ -1,0 +1,58 @@
+description = "Header of layout"
+[lang]
+==
+<div class="container">
+    <div class="lan_top">
+        <a href="/en" class="lan_item">en</a>
+        <a href="/vn" class="lan_item">vi</a>
+    </div>
+</div>
+
+<div class="topbar">
+    <div class="container">
+        <div class="d-flex justify-content-between topbar--container">
+            <h1 class="logo flex-shrink-1">
+                <a href="/{{language}}">
+                    <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
+                </a>
+            </h1>
+            <div class="d-flex nav_right">
+                <ul class="d-flex align-items-center list-nav-menu">
+                    <li class="nav_item">
+                        <a href="#" class="link_item">
+                            Dịch vụ
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                dịch vụ
+                            </li>
+                            <li>
+                                <a class="active" href="#">Co-Living</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Co-working
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="link_item">Địa điểm</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="link_item">Thành viên</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="link_item">Về Aura</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link_order_room">
+                            <!--Đặt Phòng-->
+                            <img src="{{ 'assets/images/btn_dp.png'|theme }}" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

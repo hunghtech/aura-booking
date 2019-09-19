@@ -1,0 +1,8 @@
+columns:
+    title:
+        label: title
+        type: text
+    icon:
+        label: icon
+        type: partial
+        path: ~/plugins/aura/backend/models/auralifeinfo/_icon.htm

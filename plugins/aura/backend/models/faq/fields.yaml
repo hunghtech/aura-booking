@@ -1,0 +1,11 @@
+fields:
+    title:
+        label: 'Câu hỏi'
+        size: ''
+        span: auto
+        type: textarea
+    content:
+        label: 'Giải đáp'
+        size: large
+        span: auto
+        type: textarea

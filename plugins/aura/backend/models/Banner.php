@@ -14,7 +14,10 @@ class Banner extends Model
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
+    
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
 
+    public $translatable = ['title','content','title_time'];
 
     /**
      * @var string The database table used by the model.

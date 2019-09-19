@@ -1,7 +1,7 @@
 fields:
     thumbnail1:
         label: 'Hình ảnh 1'
-        mode: file
+        mode: image
         span: auto
         type: mediafinder
     thumbnail2:
@@ -9,3 +9,11 @@ fields:
         mode: image
         span: auto
         type: mediafinder
+tabs:
+    fields:        
+        detail:
+            label: 'Thông tin chi tiết'
+            span: full
+            type: partial
+            path: $/aura/backend/controllers/auralife/_detail.htm
+            tab: Thông tin       

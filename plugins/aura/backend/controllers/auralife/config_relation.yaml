@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+detail:
+    label: 'Thông tin'
+    view:
+        list: $/aura/backend/models/auralifeinfo/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/aura/backend/models/auralifeinfo/fields.yaml
+        recordsPerPage: 10
+    deferredBinding: true 

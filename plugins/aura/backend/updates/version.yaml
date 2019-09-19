@@ -35,3 +35,12 @@
 1.0.13:
     - 'Created table aura_backend_aura_district_info'
     - builder_table_create_aura_backend_aura_district_info.php
+1.0.14:
+    - 'Updated table aura_backend_banner'
+    - builder_table_update_aura_backend_banner.php
+1.0.15:
+    - 'Created table aura_backend_faq'
+    - builder_table_create_aura_backend_faq.php
+1.0.16:
+    - 'Created table aura_backend_menu'
+    - builder_table_create_aura_backend_menu.php

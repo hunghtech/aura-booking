@@ -1,0 +1,5 @@
+fields:
+    title:
+        label: 'Dịch vụ'
+        span: auto
+        type: text

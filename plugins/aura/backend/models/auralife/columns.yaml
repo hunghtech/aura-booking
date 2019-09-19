@@ -1,0 +1,12 @@
+columns:
+    thumbnail1:
+        label: thumbnail1
+        type: partial
+        path: ~/plugins/aura/backend/models/auralife/_thumbnail1.htm
+    thumbnail2:
+        label: thumbnail2
+        type: partial
+        path: ~/plugins/aura/backend/models/auralife/_thumbnail2.htm
+    created_at:
+        label: created_at
+        type: datetime
