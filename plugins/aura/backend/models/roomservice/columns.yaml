@@ -1,0 +1,12 @@
+columns:
+    name:
+        label: name
+        type: text
+    icon:
+        label: icon
+        type: partial
+        path: ~/plugins/aura/backend/models/roomservice/_icon.htm
+    type_id:
+        label: type_id
+        relation: type
+        select: title

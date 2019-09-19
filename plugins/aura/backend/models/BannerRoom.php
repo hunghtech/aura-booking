@@ -5,18 +5,21 @@ use Model;
 /**
  * Model
  */
-class RoomType extends Model
+class BannerRoom extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
-    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
-    public $translatable = ['title'];
+    /*
+     * Disable timestamps by default.
+     * Remove this line if timestamps are defined in the database table.
+     */
+    public $timestamps = false;
 
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'aura_backend_room_type';
+    public $table = 'aura_backend_banner_room';
 
     /**
      * @var array Validation rules

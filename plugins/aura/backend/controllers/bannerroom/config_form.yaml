@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Banner Room
+
+# Model Form Field configuration
+form: $/aura/backend/models/bannerroom/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\BannerRoom
+
+# Default redirect location
+defaultRedirect: aura/backend/bannerroom
+
+# Create page
+create:
+    title: Create Banner Room
+    redirect: aura/backend/bannerroom/update/:id
+    redirectClose: aura/backend/bannerroom
+
+# Update page
+update:
+    title: Edit Banner Room
+    redirect: aura/backend/bannerroom
+    redirectClose: aura/backend/bannerroom
+
+# Preview page
+preview:
+    title: Preview Banner Room

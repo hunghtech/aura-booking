@@ -1,0 +1,5 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text

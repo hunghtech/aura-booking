@@ -1,0 +1,30 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+room_info:
+    label: 'Thông tin Phòng'
+    view:
+        list: $/aura/backend/models/roominfo/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/aura/backend/models/roominfo/fields.yaml
+        recordsPerPage: 10
+    deferredBinding: true 
+room_service:
+    label: 'Dịch vụ'
+    view:
+        list: $/aura/backend/models/roomservice/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/aura/backend/models/roomservice/fields.yaml
+        recordsPerPage: 10
+    deferredBinding: true     
+banner_room:
+    label: 'Banner'
+    view:
+        list: $/aura/backend/models/bannerroom/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/aura/backend/models/bannerroom/fields.yaml
+        recordsPerPage: 10
+    deferredBinding: true       

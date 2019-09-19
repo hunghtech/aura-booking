@@ -1,0 +1,30 @@
+fields:
+    name:
+        label: Aura
+        span: auto
+        type: text
+    address:
+        label: Địa chỉ
+        span: auto
+        type: text
+tabs:
+    fields:
+        room_info:
+            label: 'Thông tin'
+            span: full
+            type: partial
+            path: $/aura/backend/controllers/room/_room_info.htm
+            tab: Thông tin Chi phí
+        room_service:
+            label: 'Thông tin'
+            span: full
+            type: partial
+            path: $/aura/backend/controllers/room/_room_service.htm
+            tab: Thông tin Dịch Vụ
+        banner_room:
+            label: 'Banner'
+            span: full
+            type: partial
+            path: $/aura/backend/controllers/room/_banner_room.htm
+            tab: Slide Banner
+

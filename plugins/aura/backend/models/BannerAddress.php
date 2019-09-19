@@ -5,21 +5,15 @@ use Model;
 /**
  * Model
  */
-class BannerStore extends Model
+class BannerAddress extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
-    /*
-     * Disable timestamps by default.
-     * Remove this line if timestamps are defined in the database table.
-     */
-    public $timestamps = false;
-
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'aura_backend_banner_store';
+    public $table = 'aura_backend_slide_dia_diem';
 
     /**
      * @var array Validation rules

@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: 'Dịch vụ'
+        span: auto
+        type: text
+    icon:
+        label: Icon
+        mode: image
+        span: auto
+        type: mediafinder
+    type_id:
+        label: Loại
+        showSearch: true
+        span: auto
+        type: dropdown

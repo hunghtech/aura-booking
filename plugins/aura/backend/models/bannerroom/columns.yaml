@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: title
+        type: text
+    content:
+        label: content
+        type: text
+    image:
+        label: image
+        type: text

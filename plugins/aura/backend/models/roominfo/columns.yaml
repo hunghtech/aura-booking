@@ -1,0 +1,14 @@
+columns:
+    id:
+        label: id
+        type: number
+    time:
+        label: time
+        type: text
+    price:
+        label: price
+        type: text
+    type_id:
+        label: type_id
+        relation: type
+        select: title

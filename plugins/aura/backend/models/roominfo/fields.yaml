@@ -1,0 +1,14 @@
+fields:
+    time:
+        label: Tháng
+        span: auto
+        type: text
+    price:
+        label: Giá
+        span: auto
+        type: text
+    type_id:
+        label: Loại
+        showSearch: true
+        span: auto
+        type: dropdown

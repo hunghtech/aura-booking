@@ -44,3 +44,27 @@
 1.0.16:
     - 'Created table aura_backend_menu'
     - builder_table_create_aura_backend_menu.php
+1.0.17:
+    - 'Created table aura_backend_slide_dia_diem'
+    - builder_table_create_aura_backend_slide_dia_diem.php
+1.0.18:
+    - 'Updated table aura_backend_room'
+    - builder_table_update_aura_backend_room.php
+1.0.19:
+    - 'Created table aura_backend_room_categories'
+    - builder_table_create_aura_backend_room_categories.php
+1.0.20:
+    - 'Drop table aura_backend_store'
+    - builder_table_delete_aura_backend_store.php
+1.0.21:
+    - 'Updated table aura_backend_room_info'
+    - builder_table_update_aura_backend_room_info.php
+1.0.22:
+    - 'Updated table aura_backend_room_service'
+    - builder_table_update_aura_backend_room_service.php
+1.0.23:
+    - 'Updated table aura_backend_room'
+    - builder_table_update_aura_backend_room_2.php
+1.0.24:
+    - 'Updated table aura_backend_banner_store'
+    - builder_table_update_aura_backend_banner_room.php

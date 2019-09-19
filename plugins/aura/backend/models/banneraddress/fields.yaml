@@ -1,0 +1,15 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text
+    content:
+        label: 'Nội dung'
+        size: large
+        span: auto
+        type: textarea
+    image:
+        label: 'Hình ảnh'
+        mode: image
+        span: auto
+        type: mediafinder

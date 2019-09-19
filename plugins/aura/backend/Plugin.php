@@ -40,7 +40,7 @@ class Plugin extends PluginBase {
      * @return array
      */
     public function boot() {
-        
+
     }
 
     /**
@@ -53,6 +53,7 @@ class Plugin extends PluginBase {
             'Aura\Backend\Components\Homepage' => 'homepage',
             'Aura\Backend\Components\Lang' => 'lang',
             'Aura\Backend\Components\Menu' => 'menu',
+            'Aura\Backend\Components\Diadiem' => 'diadiem',
         ];
     }
 
@@ -100,6 +101,13 @@ class Plugin extends PluginBase {
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin chung',
                     ],
+                    'banneraddress' => [
+                        'label' => 'Banner Địa điểm',
+                        'icon' => 'icon-file-image-o',
+                        'url' => Backend::url('aura/backend/banneraddress'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin chung',
+                    ],
                     'auradistrict' => [
                         'label' => 'Aura District',
                         'icon' => 'icon-smile-o',
@@ -118,6 +126,20 @@ class Plugin extends PluginBase {
                         'label' => 'Dịch vụ',
                         'icon' => 'icon-university',
                         'url' => Backend::url('aura/backend/service'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Aura',
+                    ],
+                    'room' => [
+                        'label' => 'Aura',
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('aura/backend/room'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Aura',
+                    ],
+                    'roomtype' => [
+                        'label' => 'Aura Type',
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('aura/backend/roomtype'),
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin Aura',
                     ],

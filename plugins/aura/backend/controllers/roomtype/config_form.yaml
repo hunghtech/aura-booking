@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Room Type
+
+# Model Form Field configuration
+form: $/aura/backend/models/roomtype/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\RoomType
+
+# Default redirect location
+defaultRedirect: aura/backend/roomtype
+
+# Create page
+create:
+    title: Create Room Type
+    redirect: aura/backend/roomtype/update/:id
+    redirectClose: aura/backend/roomtype
+
+# Update page
+update:
+    title: Edit Room Type
+    redirect: aura/backend/roomtype
+    redirectClose: aura/backend/roomtype
+
+# Preview page
+preview:
+    title: Preview Room Type
