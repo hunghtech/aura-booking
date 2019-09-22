@@ -3,8 +3,12 @@ columns:
         label: id
         type: number
     name:
-        label: name
+        label: Aura
         type: text
-    type_id:
-        label: type_id
-        type: number
+    address:
+        label: Địa chỉ
+        type: text
+    thumbnail:
+        label: Hình đại diện
+        type: partial
+        path: ~/plugins/aura/backend/models/room/_thumbnail.htm

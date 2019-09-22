@@ -68,3 +68,18 @@
 1.0.24:
     - 'Updated table aura_backend_banner_store'
     - builder_table_update_aura_backend_banner_room.php
+1.0.25:
+    - 'Drop table aura_backend_room_categories'
+    - builder_table_delete_aura_backend_room_categories.php
+1.0.26:
+    - 'Created table aura_backend_room_living'
+    - builder_table_create_aura_backend_room_living.php
+1.0.27:
+    - 'Created table aura_backend_room_working'
+    - builder_table_create_aura_backend_room_working.php
+1.0.28:
+    - 'Created table aura_backend_room_event'
+    - builder_table_create_aura_backend_room_event.php
+1.0.29:
+    - 'Updated table aura_backend_room'
+    - builder_table_update_aura_backend_room_3.php

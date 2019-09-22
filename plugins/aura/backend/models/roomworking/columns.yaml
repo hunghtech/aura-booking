@@ -1,0 +1,11 @@
+columns:
+    id:
+        label: id
+        type: number
+    content:
+        label: Thông tin phòng
+        type: partial
+        path: ~/plugins/aura/backend/models/roomworking/_content.htm
+    created_at:
+        label: created_at
+        type: datetime

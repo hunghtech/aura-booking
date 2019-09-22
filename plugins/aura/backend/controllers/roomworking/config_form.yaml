@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Room Working
+
+# Model Form Field configuration
+form: $/aura/backend/models/roomworking/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\RoomWorking
+
+# Default redirect location
+defaultRedirect: aura/backend/roomworking
+
+# Create page
+create:
+    title: Create Room Working
+    redirect: aura/backend/roomworking/update/:id
+    redirectClose: aura/backend/roomworking
+
+# Update page
+update:
+    title: Edit Room Working
+    redirect: aura/backend/roomworking
+    redirectClose: aura/backend/roomworking
+
+# Preview page
+preview:
+    title: Preview Room Working

@@ -1,0 +1,36 @@
+{{sliders|length}}
+<div class="section pt-5 mt-5">
+    <div class="bd-example">
+
+        <div id="carousel_diadiem_09" class="carousel carousel_diadiem slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                {% for i in 0..(sliders|length - 1) %}
+                <li data-target="#carousel_diadiem_09" data-slide-to="{{i}}" class="{{i ==0 ?'active':''}}"></li>
+                {% endfor %}
+            </ol>
+
+            <div class="carousel-inner">
+                {% for index,slider in sliders%}
+                <div class="carousel-item {{index == 0?'active':''}}">
+                    <div class="content_carousel_diadiem">
+                        <div class="pic">
+                            <img src="/storage/app/media{{slider.image}}"/>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block text-left">
+                            <h2>{{slider.title}}</h2>
+                            <p>
+                                {{slider.content}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="icon_both_carousel">
+                <img src="{{'assets/images/star.png'|theme }}" alt=""/>
+                <img src="{{'assets/images/plus.png'|theme }}" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -54,6 +54,8 @@ class Plugin extends PluginBase {
             'Aura\Backend\Components\Lang' => 'lang',
             'Aura\Backend\Components\Menu' => 'menu',
             'Aura\Backend\Components\Diadiem' => 'diadiem',
+            'Aura\Backend\Components\CoLiving' => 'co-living',
+            'Aura\Backend\Components\CoWorking' => 'co-working',
         ];
     }
 
@@ -133,13 +135,6 @@ class Plugin extends PluginBase {
                         'label' => 'Aura',
                         'icon' => 'icon-university',
                         'url' => Backend::url('aura/backend/room'),
-                        'permissions' => ['aura.backend.*'],
-                        'group' => 'Thông tin Aura',
-                    ],
-                    'roomtype' => [
-                        'label' => 'Aura Type',
-                        'icon' => 'icon-university',
-                        'url' => Backend::url('aura/backend/roomtype'),
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin Aura',
                     ],

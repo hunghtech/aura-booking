@@ -7,24 +7,72 @@ fields:
         label: Địa chỉ
         span: auto
         type: text
+    content:
+        label: Nội dung
+        span: auto
+        type: textarea
+    thumbnail:
+        label: Hình đại diện
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 250
+        imageWidth: 250
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    images:
+        label: Hình ảnh Phòng
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 500
+        imageWidth: 500
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    is_co_living:
+        label: Co-Living
+        span: auto
+        type: switch
+    status:
+        label: Trạng thái
+        span: auto
+        type: switch
+    is_co_working:
+        label: Co-Working
+        span: auto
+        type: switch
 tabs:
     fields:
-        room_info:
-            label: 'Thông tin'
+        room_living:
+            label: 'Thông tin Phòng'
             span: full
             type: partial
-            path: $/aura/backend/controllers/room/_room_info.htm
-            tab: Thông tin Chi phí
-        room_service:
-            label: 'Thông tin'
+            path: $/aura/backend/controllers/room/_room_living.htm
+            tab: Gói Phòng Living
+        room_working:
+            label: 'Thông tin Phòng'
             span: full
             type: partial
-            path: $/aura/backend/controllers/room/_room_service.htm
-            tab: Thông tin Dịch Vụ
-        banner_room:
-            label: 'Banner'
+            path: $/aura/backend/controllers/room/_room_working.htm
+            tab: Gói Phòng Working
+        room_event:
+            label: 'Thông tin Phòng'
             span: full
             type: partial
-            path: $/aura/backend/controllers/room/_banner_room.htm
-            tab: Slide Banner
+            path: $/aura/backend/controllers/room/_room_event.htm
+            tab: Gói Phòng Event
 

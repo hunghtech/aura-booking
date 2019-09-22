@@ -1,0 +1,22 @@
+fields:
+    content:
+        label: 'Thông tin phòng'
+        size: giant
+        span: auto
+        type: richeditor
+    images:
+        label: Hình ảnh Phòng
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 500
+        imageWidth: 500
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto

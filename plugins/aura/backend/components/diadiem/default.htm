@@ -14,9 +14,9 @@
         </div>
     </div>
     <div style="position:absolute; left: 0px; top: -50px; z-index: 0;">
-        <img src="images/Asset%20orange.png" alt=""/>
+        <img src="{{'assets/images/bg-orange.png'|theme }}" alt=""/>
     </div>
-    <img class="bg_bn" src="images/banner2.png" alt=""/>
+    <img class="bg_bn" src="{{'assets/images/banner2.png'|theme }}" alt=""/>
 </div>
 <div class="section my-5">
     <div class="container">
@@ -34,149 +34,13 @@
             </div>
         </div>
         <div class="box_map">
-            <img src="images/map.png" alt=""/>
+            <img src="{{'assets/images/map.png'|theme }}" alt=""/>
         </div>
     </div>
 
 </div>
-<div class="contain_links_visit">
-    <div class="container">
-        <h2 class="mb-4">
-            Aura đang có mặt ở
-        </h2>
-        <div class="row">
-            <div class="col-4">
-                <div class="box-coming item">
-                    <div class="img">
-                        <img src="images/dist1.png" alt=""/>
-                    </div>
-                    <div class="drs py-2 pr-3">
-                        <p class="name pb-2">Aura Him lam</p>
-                        <p class="link_list mb-4 py-2">
-                            <a href="#">co-living</a>
-                            <a href="#">co-working</a>
-                        </p>
-                        <a href="#" class="btn-visit">
-                            <img src="images/btn_visit.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 disabled">
-                <div class="box-coming item">
-                    <div class="img">
-                        <img src="images/dist1.png" alt=""/>
-                    </div>
-                    <div class="drs py-2 pr-3">
-                        <p class="name pb-2">Aura Him lam</p>
-                        <p class="link_list mb-4 py-2">
-                            <a href="#">co-living</a>
-                            <a href="#">co-working</a>
-                        </p>
-                        <a href="#" class="btn-visit">
-                            <img src="images/btn_visit.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 disabled">
-                <div class="box-coming item">
-                    <div class="img">
-                        <img src="images/dist1.png" alt=""/>
-                    </div>
-                    <div class="drs py-2 pr-3">
-                        <p class="name pb-2">Aura Him lam</p>
-                        <p class="link_list mb-4 py-2">
-                            <a href="#">co-living</a>
-                            <a href="#">co-working</a>
-                        </p>
-                        <a href="#" class="btn-visit">
-                            <img src="images/btn_visit.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
-</div>
+{% partial __SELF__~'::store' %}
+{% partial __SELF__~'::slider' %}
+{% partial __SELF__~'::newletter' %}
 
-<div class="section pt-5 mt-5">
-    <div class="bd-example">
-
-        <div id="carousel_diadiem_09" class="carousel carousel_diadiem slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-                <li data-target="#carousel_diadiem_09" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel_diadiem_09" data-slide-to="1"></li>
-                <li data-target="#carousel_diadiem_09" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="content_carousel_diadiem">
-                        <div class="pic">
-                            <img src="images/crs1.png"/>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h2>Aura <br/>
-                                Him Lam</h2>
-                            <p>
-                                Aura District Him Lam sở hữu không gian mở hiện đại, tích hợp mọi tiện nghi bạn cần.
-                                Kết nối tới trung tâm Sài Gòn và các quận lân cận cực nhanh chóng.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content_carousel_diadiem">
-                        <div class="pic">
-                            <img src="images/crs1.png"/>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h2>Aura <br/>
-                                Him Lam</h2>
-                            <p>
-                                Aura District Him Lam sở hữu không gian mở hiện đại, tích hợp mọi tiện nghi bạn cần.
-                                Kết nối tới trung tâm Sài Gòn và các quận lân cận cực nhanh chóng.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content_carousel_diadiem">
-                        <div class="pic">
-                            <img src="images/crs1.png"/>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h2>Aura <br/>
-                                Him Lam</h2>
-                            <p>
-                                Aura District Him Lam sở hữu không gian mở hiện đại, tích hợp mọi tiện nghi bạn cần.
-                                Kết nối tới trung tâm Sài Gòn và các quận lân cận cực nhanh chóng.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="icon_both_carousel">
-                <img src="images/star.png" alt=""/>
-                <img src="images/plus.png" alt=""/>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="contain_subscribe mb-5">
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <h2 class="pt-3">Đăng ký nhận thông tin</h2>
-            <form action="" class="contain_subscribe--form">
-                <input type="text" placeholder="example@gmail.com">
-                <button type="submit">
-                    <img src="images/btn-suc.png" alt=""/>
-                </button>
-            </form>
-        </div>
-    </div>
-</div>

@@ -1,15 +1,15 @@
 <?php namespace Aura\Backend\Components;
 
 use Cms\Classes\ComponentBase;
-use Aura\Backend\Models\BannerAddress;
 use Aura\Backend\Models\Room;
+use Aura\Backend\Models\FAQ;
 
-class Diadiem extends ComponentBase
+class CoLiving extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'Diadiem Component',
+            'name'        => 'CoLiving Component',
             'description' => 'No description provided yet...'
         ];
     }
@@ -21,7 +21,7 @@ class Diadiem extends ComponentBase
 
     public function onRun()
     {
-        $this->page['sliders'] = BannerAddress::all();
-        $this->page['stores'] = Room::all();
+        $this->page['stores'] = Room::getListByService('is_co_living');
+        $this->page['faps'] = FAQ::all();
     }
 }

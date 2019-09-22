@@ -21,6 +21,9 @@ class Room extends Model
      */
     public $table = 'aura_backend_room';
 
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['name', 'content','address'];
+
     /**
      * @var array Validation rules
      */
@@ -31,15 +34,22 @@ class Room extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'room_info' => ['Aura\Backend\Models\RoomInfo'],
-        'room_service' => ['Aura\Backend\Models\RoomService'],
-        'banner_room' => ['Aura\Backend\Models\BannerRoom'],
+        /*'room_info' => ['Aura\Backend\Models\RoomInfo'],
+        'room_service' => ['Aura\Backend\Models\RoomService'],*/
+        'room_living' => ['Aura\Backend\Models\RoomLiving'],
+        'room_working' => ['Aura\Backend\Models\RoomWorking'],
+        'room_event' => ['Aura\Backend\Models\RoomEvent'],
     ];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+    public $attachOne = ['thumbnail' => ['System\Models\File']];
+    public $attachMany = ['images' => ['System\Models\File', 'order' => 'sort_order']];
+
+    public static function getListByService($service)
+    {
+        return self::where($service,1)->get();
+    }
 }

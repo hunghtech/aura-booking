@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Room Living
+
+# Model Form Field configuration
+form: $/aura/backend/models/roomliving/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\RoomLiving
+
+# Default redirect location
+defaultRedirect: aura/backend/roomliving
+
+# Create page
+create:
+    title: Create Room Living
+    redirect: aura/backend/roomliving/update/:id
+    redirectClose: aura/backend/roomliving
+
+# Update page
+update:
+    title: Edit Room Living
+    redirect: aura/backend/roomliving
+    redirectClose: aura/backend/roomliving
+
+# Preview page
+preview:
+    title: Preview Room Living

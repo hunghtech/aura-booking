@@ -1,0 +1,28 @@
+<div class="section pt-5 mt-5">
+    <div class="container">
+        <div class="mb-5">
+            <h2>
+                faq
+            </h2>
+            <p>Answer to frequently asked questions at Him Lam</p>
+        </div>
+
+        <div class="list_collapse">
+            {% for index,item in faps %}
+            <div class="item mb-4">
+                <a class="item-link" data-toggle="collapse" href="#collapseExample{{index+1}}" role="button"
+                   aria-expanded="false" aria-controls="collapseExample{{index+1}}">
+                    {{item.lang(language).title}}
+                    <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
+                </a>
+                <div class="collapse" id="collapseExample{{index+1}}">
+                    <div class="collapse-content">
+                        {{item.lang(language).content}}
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Room Event
+
+# Model Form Field configuration
+form: $/aura/backend/models/roomevent/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\RoomEvent
+
+# Default redirect location
+defaultRedirect: aura/backend/roomevent
+
+# Create page
+create:
+    title: Create Room Event
+    redirect: aura/backend/roomevent/update/:id
+    redirectClose: aura/backend/roomevent
+
+# Update page
+update:
+    title: Edit Room Event
+    redirect: aura/backend/roomevent
+    redirectClose: aura/backend/roomevent
+
+# Preview page
+preview:
+    title: Preview Room Event
