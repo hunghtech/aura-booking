@@ -56,6 +56,7 @@ class Plugin extends PluginBase {
             'Aura\Backend\Components\Diadiem' => 'diadiem',
             'Aura\Backend\Components\CoLiving' => 'co-living',
             'Aura\Backend\Components\CoWorking' => 'co-working',
+            'Aura\Backend\Components\BookingRoom' => 'booking-room',
         ];
     }
 
@@ -116,6 +117,20 @@ class Plugin extends PluginBase {
                         'url' => Backend::url('aura/backend/auradistrict'),
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin Trang chủ',
+                    ],                    
+                    'colivingaura' => [
+                        'label' => 'Co-living ở Aura',
+                        'icon' => 'icon-newspaper-o',
+                        'url' => Backend::url('aura/backend/colivingaura'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin chung',
+                    ],
+                    'coworkingaura' => [
+                        'label' => 'Co-working ở Aura',
+                        'icon' => 'icon-newspaper-o',
+                        'url' => Backend::url('aura/backend/coworkingaura'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin chung',
                     ],
                     'auralife' => [
                         'label' => 'Cuộc sống tại Aura',

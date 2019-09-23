@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Co Living Aura
+
+# Model Form Field configuration
+form: $/aura/backend/models/colivingaura/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\CoLivingAura
+
+# Default redirect location
+defaultRedirect: aura/backend/colivingaura
+
+# Create page
+create:
+    title: Create Co Living Aura
+    redirect: aura/backend/colivingaura/update/:id
+    redirectClose: aura/backend/colivingaura
+
+# Update page
+update:
+    title: Edit Co Living Aura
+    redirect: aura/backend/colivingaura
+    redirectClose: aura/backend/colivingaura
+
+# Preview page
+preview:
+    title: Preview Co Living Aura

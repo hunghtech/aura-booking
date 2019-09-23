@@ -1,0 +1,10 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text
+    content:
+        label: 'Nội dung'
+        size: giant
+        span: auto
+        type: richeditor

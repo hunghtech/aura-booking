@@ -1,0 +1,29 @@
+<div class="section pt-5 mt-5">
+    <h2 class="text-center mb-5">
+        {{ 'Co-working ở Aura có gì ?'|_ }}                        
+    </h2>
+    <div class="box_center_link">
+        <div class="contain_banner_link contain_banner_link--collapse mr-4">
+            <div class="links_box">
+                {% for index,tab in tabs %}
+                <a class="item" data-toggle="collapse" href="#collapseExample{{index+1}}" role="button" aria-expanded="false"
+                   aria-controls="collapseExample{{index+1}}">
+                    <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
+                    {{tab.lang(language).title}}
+                </a>        
+                <div class="collapse" id="collapseExample{{index+1}}">
+                    <div class="collapse-content px-3 py-3">
+                            {{tab.lang(language).content|raw}}
+                        </div>
+                    </div>
+                    {% endfor %}                
+                    <div class="mt-4 d-flex justify-content-end">
+                        <a href="" class="link_box mb-4">
+                            {{ 'đặt phòng'|_ }}<img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img class="img_right" src="{{'assets/images/bg-co-living.png'|theme }}" alt=""/>
+        </div>
+    </div>

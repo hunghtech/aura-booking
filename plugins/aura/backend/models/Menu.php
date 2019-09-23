@@ -17,7 +17,7 @@ class Menu extends Model {
      */
     public $table = 'aura_backend_menu';
     public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
-    public $translatable = ['title', 'parent_id'];
+    public $translatable = ['title', 'parent_id','link'];
 
     /**
      * @var array Validation rules

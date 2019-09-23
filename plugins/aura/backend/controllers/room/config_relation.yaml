@@ -28,3 +28,12 @@ room_event:
         form: $/aura/backend/models/roomevent/fields.yaml
         recordsPerPage: 10
     deferredBinding: true
+banner_room:
+    label: 'Dịch vụ Co-Living'
+    view:
+        list: $/aura/backend/models/bannerroom/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/aura/backend/models/bannerroom/fields.yaml
+        recordsPerPage: 10
+    deferredBinding: true           

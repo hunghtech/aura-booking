@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: title
+        type: number
+    content:
+        label: Nội dung
+        type: partial
+        path: ~/plugins/aura/backend/models/coworkingaura/_content.htm
+    created_at:
+        label: created_at
+        type: datetime

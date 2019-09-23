@@ -7,10 +7,6 @@ fields:
         label: Địa chỉ
         span: auto
         type: text
-    content:
-        label: Nội dung
-        span: auto
-        type: textarea
     thumbnail:
         label: Hình đại diện
         type: fileupload
@@ -63,6 +59,12 @@ tabs:
             type: partial
             path: $/aura/backend/controllers/room/_room_living.htm
             tab: Gói Phòng Living
+        banner_room:
+            label: 'Thông tin Dịch vụ'
+            span: full
+            type: partial
+            path: $/aura/backend/controllers/room/_banner_room.htm
+            tab: Dịch vụ Co-Living
         room_working:
             label: 'Thông tin Phòng'
             span: full

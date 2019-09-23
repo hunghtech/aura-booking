@@ -20,10 +20,24 @@ class BannerRoom extends Model
      * @var string The database table used by the model.
      */
     public $table = 'aura_backend_banner_room';
+    
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['title','content'];
 
     /**
      * @var array Validation rules
      */
-    public $rules = [
-    ];
+    public $rules = [];
+    
+    /**
+     * @var array Relations
+     */
+    public $hasOne = [];
+    public $hasMany = [];
+    public $belongsTo = [];
+    public $belongsToMany = [];
+    public $morphTo = [];
+    public $morphOne = [];
+    public $morphMany = [];
+    public $attachMany = [];
 }

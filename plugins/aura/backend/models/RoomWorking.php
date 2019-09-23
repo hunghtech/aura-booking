@@ -14,6 +14,9 @@ class RoomWorking extends Model
      * @var string The database table used by the model.
      */
     public $table = 'aura_backend_room_working';
+    
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['content'];
 
     /**
      * @var array Validation rules

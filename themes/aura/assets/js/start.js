@@ -2,7 +2,10 @@
 $(document).ready(function () {
     $(document).ready(function() {
         $(window).on('load', function () {
-            // alert(1);
+            $('.datepicker').datepicker({
+                weekStart: 1,
+                color: 'red'
+            });
             $('body').addClass('loaded');
             $("#carouselExampleIndicators1").on('slide.bs.carousel', function (data) {
                 // do something...
@@ -21,6 +24,21 @@ $(document).ready(function () {
                 // $('.link_tab_direct').siblings().removeClass('active');
                 // $(this).addClass('active');
             })*/
+            $('.nav-tab-product[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                // e.target // newly activated tab
+                // e.relatedTarget // previous active tab
+                var crs = "#" + $(e.target).attr("data-carousel");
+                $("#carousel-event").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
+                $(crs).addClass('carousel-even--active');
+            });
+            
+            $('.nav-tab-working[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                // e.target // newly activated tab
+                // e.relatedTarget // previous active tab
+                var crs = "#" + $(e.target).attr("data-carousel");
+                $("#carousel-working").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
+                $(crs).addClass('carousel-even--active');
+            });
 
             $('.accordion--sanpham').on('shown.bs.collapse', function (e) {
                 // do something...

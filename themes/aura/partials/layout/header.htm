@@ -3,8 +3,8 @@ description = "Header of layout"
 ==
 <div class="container">
     <div class="lan_top">
-        <a href="/en" class="lan_item">en</a>
-        <a href="/vn" class="lan_item">vi</a>
+        <a href="/en" class="lan_item {{language == 'en'?'active':''}}">en</a>
+        <a href="/vn" class="lan_item {{language == 'vn'?'active':''}}">vi</a>
     </div>
 </div>
 
@@ -15,17 +15,17 @@ description = "Header of layout"
                 <a href="/{{language}}">
                     <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
                 </a>
-            </h1>
+            </h1>            
             <div class="d-flex nav_right">
                 <ul class="d-flex align-items-center list-nav-menu">
                     {% for menu in menuList %}
                     <li class="nav_item">
-                        <a href="{{menu.link}}" class="link_item">{{menu.lang(language).title}}</a>
+                        <a href="{{menu.link}}" class="link_item {{this.page.tab == menu.lang(language).title?'active':''}}">{{menu.lang(language).title}}</a>
                         {{menu.id|getChildrenMenu}}
                     </li>                                        
                     {% endfor %}
                     <li>
-                        <a href="#" class="link_order_room">
+                        <a href="/{{language}}/dat-phong" class="link_order_room">
                             <!--Đặt Phòng-->
                             <img src="{{ 'assets/images/btn_dp.png'|theme }}" alt=""/>
                         </a>

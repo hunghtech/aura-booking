@@ -7,6 +7,7 @@ use RainLab\Translate\Classes\Translator;
 use Aura\Backend\Models\AuraDistrictInfo;
 use Aura\Backend\Models\AuraLife;
 use Aura\Backend\Models\Banner;
+use Aura\Backend\Models\Room;
 
 class Homepage extends ComponentBase {
 
@@ -28,6 +29,7 @@ class Homepage extends ComponentBase {
         $this->page['auraDistricts'] = AuraDistrictInfo::all();
         $this->page['auraLifes'] = AuraLife::all();
         $this->page['banners'] = Banner::all();
+        $this->page['stores'] = Room::all();
     }
 
 }

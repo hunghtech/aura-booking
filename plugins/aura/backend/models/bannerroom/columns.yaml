@@ -5,6 +5,3 @@ columns:
     content:
         label: content
         type: text
-    image:
-        label: image
-        type: text

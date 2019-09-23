@@ -1,0 +1,12 @@
+.orange{
+    background-image: url(../images/Workingroom_bg.png) !important;
+}
+.carousel_content{
+    background-size: contain;
+}
+.top_banner .text-big{
+    margin-top: 40px;
+}
+.lan_top .active{
+    color:#007bff;
+}

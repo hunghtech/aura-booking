@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Co Working Aura
+
+# Model Form Field configuration
+form: $/aura/backend/models/coworkingaura/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\CoWorkingAura
+
+# Default redirect location
+defaultRedirect: aura/backend/coworkingaura
+
+# Create page
+create:
+    title: Create Co Working Aura
+    redirect: aura/backend/coworkingaura/update/:id
+    redirectClose: aura/backend/coworkingaura
+
+# Update page
+update:
+    title: Edit Co Working Aura
+    redirect: aura/backend/coworkingaura
+    redirectClose: aura/backend/coworkingaura
+
+# Preview page
+preview:
+    title: Preview Co Working Aura

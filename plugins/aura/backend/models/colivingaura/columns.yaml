@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: title
+        type: text
+    content:
+        label: Nội dung
+        type: partial
+        path: ~/plugins/aura/backend/models/colivingaura/_content.htm
+    created_at:
+        label: created_at
+        type: datetime
