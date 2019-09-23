@@ -20,7 +20,7 @@ description = "Header of layout"
                 <ul class="d-flex align-items-center list-nav-menu">
                     {% for menu in menuList %}
                     <li class="nav_item">
-                        <a href="{{menu.link}}" class="link_item {{this.page.tab == menu.lang(language).title?'active':''}}">{{menu.lang(language).title}}</a>
+                        <a href="/{{language}}/{{menu.link}}" class="link_item {{this.page.tab == menu.lang(language).title?'active':''}}">{{menu.lang(language).title}}</a>
                         {{menu.id|getChildrenMenu}}
                     </li>                                        
                     {% endfor %}

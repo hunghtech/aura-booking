@@ -2,7 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Aura\Backend\Models\Room;
-use Aura\Backend\Models\FAQ;
+use Aura\Backend\Models\Faq;
 use Aura\Backend\Models\CoLivingAura;
 
 class CoLiving extends ComponentBase
@@ -23,7 +23,7 @@ class CoLiving extends ComponentBase
     public function onRun()
     {
         $this->page['stores'] = Room::getListByService('is_co_living');
-        $this->page['faps'] = FAQ::all();
+        $this->page['faps'] = Faq::all();
         $this->page['tabs'] = CoLivingAura::all();
     }
 }
