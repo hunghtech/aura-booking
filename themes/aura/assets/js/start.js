@@ -6,6 +6,7 @@ $(document).ready(function () {
                 weekStart: 1,
                 color: 'red'
             });
+            new WOW().init();
             $('body').addClass('loaded');
             $("#carouselExampleIndicators1").on('slide.bs.carousel', function (data) {
                 // do something...
