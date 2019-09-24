@@ -14,6 +14,9 @@ class BannerAddress extends Model
      * @var string The database table used by the model.
      */
     public $table = 'aura_backend_slide_dia_diem';
+    
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['title','content'];
 
     /**
      * @var array Validation rules

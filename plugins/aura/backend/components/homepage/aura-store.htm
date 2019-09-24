@@ -11,12 +11,12 @@
                         <img src="{{store.thumbnail.path}}" alt=""/>
                     </div>
                     <div class="drs py-2 pr-3">
-                        <p class="name pb-2">{{store.name}}</p>
-                        <p class="link_list mb-4 py-2">
-                            <a href="#">co-living</a>
-                            <a href="#">co-working</a>
+                        <p class="name pb-2">{{store.lang(language).name}}</p>
+                        <p class="link_list mb-4 py-2">                            
+                            <a href="/{{language}}/co-living">{{store.is_co_living == 1?'co-living':''}}</a>                            
+                            <a href="/{{language}}/co-working">{{store.is_co_working == 1?'co-working':''}}</a>                                                                             
                         </p>
-                        <a href="#" class="btn-visit">
+                        <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn-visit">
                             <img src="{{'assets/images/btn_visit.png'|theme }}" alt=""/>
                         </a>
                     </div>

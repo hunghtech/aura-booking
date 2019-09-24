@@ -98,3 +98,6 @@
 1.0.34:
     - 'Updated table aura_backend_co_working_aura'
     - builder_table_update_aura_backend_co_working_aura.php
+1.0.35:
+    - 'Updated table aura_backend_room'
+    - builder_table_update_aura_backend_room_4.php

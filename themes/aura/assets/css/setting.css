@@ -8,5 +8,16 @@
     margin-top: 40px;
 }
 .lan_top .active{
-    color:#007bff;
+    color:#fb0;
+    font-weight: bold;
+}
+.select-aura, .select-aura:hover{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 18px;
+}
+.contain_subscribe--form button img{
+    cursor: pointer;
 }

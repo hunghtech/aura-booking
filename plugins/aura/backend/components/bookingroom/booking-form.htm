@@ -6,16 +6,22 @@
                     Aura Him Lam
                 </h2>
                 <p class="mb-2">
-                    Số 1 – 3, đường D4, KDC Him Lam,
-                    P.Tân Hưng, Quận 7, TP.HCM, Việt Nam
+                    Số 1 – 3, đường D4, KDC Him Lam,P.Tân Hưng, Quận 7, TP.HCM, Việt Nam
                 </p>
                 <p class="mb-5">
                     Đăng ký sử dụng dịch vụ tại Aura District. Bộ phận CSKH của chúng tôi sẽ liên hệ với bạn trong
-                    24h để
-                    xác
-                    nhận thông tin.
+                    24h để xác nhận thông tin.
                 </p>
                 <form action="" class="form_input_date mb-5">
+                    <div class="input_group mb-4">
+                        <img class="icon_left" src="{{'assets/images/icon-address.png'|theme}}" alt=""/>
+                        <select class="form-control select-aura" required="true">
+                            <option value="">---Vui lòng chọn Aura---</option>
+                            {% for store in stores %}
+                                <option {{aura == store.slug?"selected='true'":""}} value="{{store.name}}">{{store.name}}</option>
+                            {% endfor %}                            
+                        </select>
+                    </div>
                     <div class="input_group mb-4">
                         <img class="icon_left" src="{{'assets/images/icon_plain_w.png'|theme}}" alt=""/>
                         <input placeholder="Ngày đến" class="datepicker form-control" type="text"/>

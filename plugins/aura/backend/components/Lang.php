@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use RainLab\Translate\Classes\Translator;
+use Aura\Backend\Models\Room;
 
 class Lang extends ComponentBase
 {
@@ -22,5 +23,6 @@ class Lang extends ComponentBase
         $translator = Translator::instance();
         $activeLocale = $translator->getLocale();
         $this->page['language'] = $activeLocale;
+        $this->page['stores'] = Room::get()->toArray();
     }
 }

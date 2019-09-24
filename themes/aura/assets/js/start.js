@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(window).on('load', function () {
             $('.datepicker').datepicker({
                 weekStart: 1,
-                color: 'red'
+                color: 'red',
             });
             new WOW().init();
             $('body').addClass('loaded');
