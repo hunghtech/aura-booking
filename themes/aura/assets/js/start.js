@@ -2,9 +2,13 @@
 $(document).ready(function () {
     $(document).ready(function() {
         $(window).on('load', function () {
+            var nowTemp = new Date();
+            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
             $('.datepicker').datepicker({
-                weekStart: 1,
-                color: 'red',
+              onRender: function(date) {
+                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+              }
             });
             new WOW().init();
             $('body').addClass('loaded');
