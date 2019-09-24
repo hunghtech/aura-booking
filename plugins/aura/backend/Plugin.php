@@ -57,6 +57,7 @@ class Plugin extends PluginBase {
             'Aura\Backend\Components\CoLiving' => 'co-living',
             'Aura\Backend\Components\CoWorking' => 'co-working',
             'Aura\Backend\Components\BookingRoom' => 'booking-room',
+            'Aura\Backend\Components\AboutUs' => 'about-us',
         ];
     }
 
