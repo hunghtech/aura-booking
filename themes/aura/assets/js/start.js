@@ -58,7 +58,13 @@ $(document).ready(function () {
             var crs = "#" + $(e.target).attr("data-carouse");
             $('.active_show').removeClass('active_show');
             $(crs).addClass('active_show');
-        })
+        });
+        $('.collapse_mobile').on('shown.bs.collapse', function (e) {
+            $('.carousel_content').addClass('carousel_content_full');
+        });
+        $('.collapse_mobile').on('hidden.bs.collapse', function (e) {
+            $('.carousel_content').removeClass('carousel_content_full');
+        });
 
         $("body").delegate(".nav-menu", "click", function () {
             var type = $(this).attr('data-type');
@@ -98,14 +104,14 @@ AURA.registerSuccess = function () {
 AURA.openNav = function () {
     $("body").delegate(".navbar-toggler-icon", "click", function () {
         $("#mySidenav").fadeIn(1000);
-       //document.getElementById("mySidenav").style.width = "100%"; 
-    });    
+       //document.getElementById("mySidenav").style.width = "100%";
+    });
 }
 
 AURA.closeNav = function () {
     $("body").delegate(".closebtn", "click", function () {
         $("#mySidenav").fadeOut(1000);
-       //document.getElementById("mySidenav").style.width = "0"; 
+       //document.getElementById("mySidenav").style.width = "0";
     });
 }
 

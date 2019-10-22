@@ -26,17 +26,17 @@ security = "all"
         <div class="loading_page">
             <div data-wow-iteration="10" data-wow-duration="0.15" class="wow pulse bg_img"></div>
         </div>
-        {% if (this.page.show_paralax) %}
-        {% if(this.page.product_paralax) %}
-        <div class="rellax" data-rellax-speed="-6" style="position:absolute; left: 0px; top: -50px; z-index: 0;">
-            <img src="{{'assets/images/bg_fixed.png'|theme }}" alt=""/>
-        </div>
-        {% else %}
-        <div class="rellax" data-rellax-speed="-4" style="position:absolute; left: 0px; top: -50px; z-index: 0;">
-            <img src="{{'assets/images/bg-orange.png'|theme }}" alt=""/>
-        </div>
-        {% endif %}
-        {% endif %}
+		{% if (this.page.show_paralax) %}
+            {% if(this.page.product_paralax) %}
+                <div class="rellax" data-rellax-speed="-6" style="position:absolute; left: 0px; top: -50px; z-index: 0;">
+                    <img src="{{'assets/images/bg_fixed.png'|theme }}" alt=""/>
+                </div>
+            {% else %}
+                <div class="rellax" data-rellax-speed="-10" style="position:absolute; left: 0px; top: -50px; z-index: 0;">
+                    <img src="{{'assets/images/bg-orange.png'|theme }}" alt=""/>
+                </div>
+            {% endif %}
+		{% endif %}
         <div id="page">
             {% partial 'layout/header' %}
             {% page %}

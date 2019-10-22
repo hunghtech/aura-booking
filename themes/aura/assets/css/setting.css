@@ -1,9 +1,6 @@
 .product .orange{
     background-image: url(../images/Workingroom_bg.png) !important;
 }
-.carousel_content{
-    background-size: contain;
-}
 .top_banner .text-big{
     margin-top: 40px;
 }
@@ -80,7 +77,7 @@
     background-color: #007bff;
     overflow-x: hidden;
     /*transition: 0.5s;*/
-    padding-top: 60px;    
+    padding-top: 60px;
     display: none;
     background-image: url(../images/bh-menu-mobile.jpg);
     background-position: bottom;
@@ -101,21 +98,19 @@
 .sidenav .nav-item{
     position: relative;
     display: block;
-    padding: 5px 25px;    
+    padding: 5px 25px;
     cursor: pointer;
 }
-.nav-item:before{
+.sidenav .nav-item:before{
     content: "";
     border-top: 2px solid #000;
     max-width: 320px;
     height: 8px;
     display: block;
 }
-
 .sidenav a:hover{
     color: #f1f1f1;
 }
-
 .sidenav .closebtn {
     position: absolute;
     top: 20px;
@@ -131,15 +126,15 @@
     position: relative;
 }
 .sidenav .item-info-foo:first-child{
-    width: 40%;    
+    width: 40%;
     text-align: left;
 }
 .sidenav .item-info-foo:first-child a{
     color:#000 !important;
 }
 .sidenav .item-info-foo:last-child{
-    width: 60%;    
-    text-align: left;    
+    width: 60%;
+    text-align: left;
 }
 .sidenav .item-info-foo a{
     font-size: 13px;
@@ -155,7 +150,7 @@
 }
 .social_box{
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 .social_box .lan_top{
     padding: 20px 30px;
@@ -164,11 +159,36 @@
     background-color: #fff;
 }
 .btn-dp:hover{
-  background: #fb0;   
+  background: #fb0;
+}
+.contain_stay--box-small img{
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+.slogan_item .title{
+    font-size: 20px;
+    font-weight: 600;
 }
 /*About Us*/
 .box_about_top h2{
     font-size: 1.75rem;
+}
+/*Co-Living*/
+.isMobile .box-living-mobile{
+    background-image: url(../images/bg-living-mobile.png);
+}
+/*Co-Working*/
+
+.isMobile .box-event-mobile{
+    background-image: url(../images/bg-event-mobile.png);
+}
+
+.isMobile .box-working-mobile{
+    background-image: url(../images/bg-working-mobile.png);
+}
+.carousel_content_full{
+    background-size: 120% 85% !important;
 }
 /*Footer*/
 .box_animate_foo{
@@ -189,7 +209,7 @@
         margin-bottom: 15px;
     }
     .footerMobile .item-info-foo {
-        text-align: right;        
+        text-align: right;
         top: 20px;
         position: relative;
         font-size: 35px;
@@ -212,12 +232,24 @@
     }
     .sidenav .nav-item:last-child{
         margin-bottom: 20px;
-        
+
     }
     .sidenav .nav-item:last-child:after{
         display: block;
         content: '';
         border-bottom: 2px solid #000;
+    }
+    .carousel_content{
+        background-size: 120% 65%;
+    }
+    .pic_inner img{
+        clip-path: polygon(10% 0, 100% 0, 100% 80%, 30% 100%);
+    }
+    .list_contain_slogan .carousel_home .contain-item .pic_inner{
+        padding-top: 90%;
+    }
+    .embed-responsive{
+        height: 530px;
     }
 }
 @media (max-width: 991px){
