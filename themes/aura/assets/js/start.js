@@ -121,14 +121,14 @@ AURA.registerSuccess = function () {
 }
 AURA.openNav = function () {
     $("body").delegate(".navbar-toggler-icon", "click", function () {
-        $("#mySidenav").fadeIn(1000);
+        $("#mySidenav").fadeIn(500);
        //document.getElementById("mySidenav").style.width = "100%";
     });
 }
 
 AURA.closeNav = function () {
     $("body").delegate(".closebtn", "click", function () {
-        $("#mySidenav").fadeOut(1000);
+        $("#mySidenav").fadeOut(500);
        //document.getElementById("mySidenav").style.width = "0";
     });
 }
