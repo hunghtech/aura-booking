@@ -1,0 +1,24 @@
+<div class="content_phongdadat mb-5">
+    <h2 class="mb-4">
+        {{ 'Thông tin tài khoản'|_ }}
+    </h2>
+    <ul class="nav nav-tabs nav-tabs-auth" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+               aria-controls="home" aria-selected="true">
+                <span>{{ 'Đăng nhập'|_ }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+               aria-controls="profile" aria-selected="false">
+                <span>{{ 'Tạo tài khoản'|_ }}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content tab-content-aura" id="myTabContent">
+        {% partial __SELF__~'::login' %}
+        {% partial __SELF__~'::register' %}
+    </div>
+
+</div>

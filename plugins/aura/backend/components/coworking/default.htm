@@ -1,29 +1,39 @@
-    <div class="banner_sanpham">
-        <div class="banner_caption_sanpham">
-            <div class="container">
-                <div class="caption_banner">
-                    <p class="drs">
-                        Động lực thôi thúc của Aura District chính là kiến tạo các mảng không gian mở đầy cảm hứng.
-                        Chúng mình giúp kết nối bạn bè dễ dàng và thúc đẩy sự phát triển cùng nhau.
-                    </p>
-                    <h4 class="title my-3">
-                        Aura Him Lam
-                    </h4>
-                    <a href="#" class="link">
-                        <img src="{{'assets/images/btn_thamquan.png'|theme}}" alt=""/>
-                    </a>
-                </div>
+<div class="banner_sanpham">
+    <div class="banner_caption_sanpham">
+        <div class="container">
+            <div class="caption_banner">
+                <p class="drs">
+                    Động lực thôi thúc của Aura District chính là kiến tạo các mảng không gian mở đầy cảm hứng.
+                    Chúng mình giúp kết nối bạn bè dễ dàng và thúc đẩy sự phát triển cùng nhau.
+                </p>
+                <h4 class="title my-3">
+                    Aura Him Lam
+                </h4>
+                <a href="#" class="link">
+                    <img src="{{'assets/images/btn_thamquan.png'|theme}}" alt=""/>
+                </a>
             </div>
         </div>
-        <div style="position:absolute; left: 0px; top: -50px; z-index: 0;">
-            <img src="{{'assets/images/bg_fixed.png'|theme}}" alt=""/>
-        </div>
-        <img class="bg_bn" src="{{'assets/images/banner2.png'|theme}}" alt=""/>
     </div>
     
+    <img class="bg_bn" src="{{'assets/images/banner2.png'|theme}}" alt=""/>
+</div>
+
 {% partial __SELF__~'::co-working-aura' %}
-{% partial __SELF__~'::package-room-working' %}    
-{% partial __SELF__~'::package-room-event' %}    
+<div class="section product">
+    <h2 class="text-center mt-sm-5 mb-sm-5">
+        {{ 'Các gói phòng working'|_ }}
+    </h2>
+    {% partial __SELF__~'::package-room-working-desktop' %}
+    {% partial __SELF__~'::package-room-working-mobile' %}
+</div>
+<div class="section">
+    <h2 class="text-center mt-sm-5 mb-sm-5">      
+        {{ 'Các gói phòng event'|_ }}
+    </h2>
+    {% partial __SELF__~'::package-room-event-desktop' %}
+    {% partial __SELF__~'::package-room-event-mobile' %}
+</div>
 <div class="section my-5">
     <div class="container">
         <div class="d-flex justify-content-between my-5">
@@ -48,6 +58,6 @@
         </div>
     </div>
     <div class="box_map">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7839.823937316124!2d106.69278412286299!3d10.741267901311659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zMSDigJMgMyDEkcaw4budbmcgRDQsIEtEQyBIaW0gTGFtLCBQLlTDom4gSMawbmcsIFF14bqtbiA3LCBUUC5IQ00sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1569311335009!5m2!1svi!2s" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7839.823937316124!2d106.69278412286299!3d10.741267901311659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zMSDigJMgMyDEkcaw4budbmcgRDQsIEtEQyBIaW0gTGFtLCBQLlTDom4gSMawbmcsIFF14bqtbiA3LCBUUC5IQ00sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1569311335009!5m2!1svi!2s" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 </div>

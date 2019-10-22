@@ -1,29 +1,57 @@
 <div class="section pt-5 mt-5">
     <h2 class="text-center mb-5">
-        Co-living ở Aura có gì ?
+        {{ 'Co-living ở Aura có gì ?'|_ }}
     </h2>
-    <div class="box_center_link">
-        <div class="contain_banner_link contain_banner_link--collapse mr-4">
-            <div class="links_box">
-                {% for index,tab in tabs %}
-                <a class="item" data-toggle="collapse" href="#collapseExample{{index+1}}" role="button" aria-expanded="false"
-                   aria-controls="collapseExample{{index+1}}">
-                    <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
-                    {{tab.lang(language).title}}
-                </a>        
-                <div class="collapse" id="collapseExample{{index+1}}">
-                    <div class="collapse-content px-3 py-3">
+    <div class="isDesktop">
+        <div class="box_center_link">
+            <div class="contain_banner_link contain_banner_link--collapse mr-4">
+                <div class="links_box">
+                    {% for index,tab in tabs %}
+                    <a class="item" data-toggle="collapse" href="#collapseExample{{index+1}}" role="button" aria-expanded="false"
+                       aria-controls="collapseExample{{index+1}}">
+                        <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
+                        {{tab.lang(language).title}}
+                    </a>        
+                    <div class="collapse" id="collapseExample{{index+1}}">
+                        <div class="collapse-content px-3 py-3">
                             {{tab.lang(language).content|raw}}
                         </div>
                     </div>
                     {% endfor %}                
                     <div class="mt-4 d-flex justify-content-end">
                         <a href="" class="link_box mb-4">
-                            đặt phòng <img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
+                            {{ 'đặt phòng'|_ }} <img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
                         </a>
                     </div>
                 </div>
             </div>
             <img class="img_right" src="{{'assets/images/bg-co-living.png'|theme }}" alt=""/>
         </div>
+    </div>    
+
+    <div class="container isMobile">
+        <div class="box_links_sp1">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                {% for index,tab in tabs %}
+                <li class="nav-item">
+                    <a class="nav-link {{index == 0 ?'active':''}}" data-toggle="tab" href="#tab{{index+1}}">
+                        {{tab.lang(language).title}}
+                    </a>
+                </li>
+                {% endfor %}     
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                {% for index,tab in tabs %}
+                <div id="tab{{index+1}}" class="container tab-pane {{index == 0 ?'active':'fade'}}">
+                    <div class="py-2">
+                        {{tab.lang(language).content|raw}}
+                    </div>
+                    <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
+                </div>                
+                {% endfor %}
+            </div>            
+        </div>
     </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="content_phongdadat mb-5">
+    <div class="table-responsive">
+        <table class="table_status">
+            <tr>
+                <th>{{ 'Building'|_ }}</th>
+                <th>{{ 'Thời gian'|_ }}</th>
+                <th>{{ 'Trạng thái'|_ }}</th>
+            </tr>
+            {% for item in bookRooms %}
+            <tr>
+                <td>{{item.buildingInfo[0]['name']}}</td>
+                <td>
+                    {% if (item.from_date and item.to_date)%}
+                        Từ {{item.from_date|formatDate}} - {{item.to_date|formatDate}}
+                    {% else %}
+                        <p>{{ 'Chưa biết ngày tới'|_ }}</p>
+                    {% endif %}
+                </td>
+                <td>
+                    {{ 'Đang đặt'|_ }}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>

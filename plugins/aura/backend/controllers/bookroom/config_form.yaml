@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Book Room
+
+# Model Form Field configuration
+form: $/aura/backend/models/bookroom/fields.yaml
+
+# Model Class name
+modelClass: Aura\Backend\Models\BookRoom
+
+# Default redirect location
+defaultRedirect: aura/backend/bookroom
+
+# Create page
+create:
+    title: Create Book Room
+    redirect: aura/backend/bookroom/update/:id
+    redirectClose: aura/backend/bookroom
+
+# Update page
+update:
+    title: Edit Book Room
+    redirect: aura/backend/bookroom
+    redirectClose: aura/backend/bookroom
+
+# Preview page
+preview:
+    title: Preview Book Room

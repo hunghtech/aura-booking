@@ -56,8 +56,11 @@ class Plugin extends PluginBase {
             'Aura\Backend\Components\Diadiem' => 'diadiem',
             'Aura\Backend\Components\CoLiving' => 'co-living',
             'Aura\Backend\Components\CoWorking' => 'co-working',
-            'Aura\Backend\Components\BookingRoom' => 'booking-room',
+            'Aura\Backend\Components\BookingRoom' => 'bookingRoom',
             'Aura\Backend\Components\AboutUs' => 'about-us',
+            'Aura\Backend\Components\Member' => 'member',
+            'Aura\Backend\Components\ForgotPassword' => 'forgotPassword',
+            'Aura\Backend\Components\Account' => 'accountAura',
         ];
     }
 
@@ -118,7 +121,7 @@ class Plugin extends PluginBase {
                         'url' => Backend::url('aura/backend/auradistrict'),
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin Trang chủ',
-                    ],                    
+                    ],
                     'colivingaura' => [
                         'label' => 'Co-living ở Aura',
                         'icon' => 'icon-newspaper-o',
@@ -160,6 +163,13 @@ class Plugin extends PluginBase {
                         'url' => Backend::url('aura/backend/faq'),
                         'permissions' => ['aura.backend.*'],
                         'group' => 'Thông tin Aura',
+                    ],
+                    'bookroom' => [
+                        'label' => 'History Book Room',
+                        'icon' => 'icon-history',
+                        'url' => Backend::url('aura/backend/bookroom'),
+                        'permissions' => ['aura.backend.*'],
+                        'group' => 'Thông tin Aura',
                     ]
                 ]
             ],
@@ -169,7 +179,10 @@ class Plugin extends PluginBase {
     public function registerMarkupTags() {
         return [
             'filters' => [
-                'getChildrenMenu' => ['Aura\Backend\Classes\HelperClass', 'getChildrenMenu']
+                'getChildrenMenu' => ['Aura\Backend\Classes\HelperClass', 'getChildrenMenu'],
+                'getChildrenMenuMobile' => ['Aura\Backend\Classes\HelperClass', 'getChildrenMenuMobile'],
+                'getCharacterFirst' => ['Aura\Backend\Classes\HelperClass', 'getCharacterFirst'],
+                'formatDate' => ['Aura\Backend\Classes\HelperClass', 'formatDate']
             ]
         ];
     }

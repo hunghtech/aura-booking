@@ -1,0 +1,54 @@
+<div class="tab-pane fade show active" id="home" role="tabpanel"
+     aria-labelledby="home-tab">
+    <form method="post" data-request="account::onSignin" action="" class="form_info_account mt-5">
+        <div class="field_item">
+            <label for="">Email</label>
+            <input type="text" name="email" placeholder="Email" required>
+        </div>
+        <div class="field_item">
+            <label for="">{{ 'Mật khẩu'|_ }}</label>
+            <input type="password" name="password" placeholder="*******" required>
+        </div>
+        <div class="field_item">
+            <label for="">
+            </label>
+            <div class="field_item__group">
+                <p class="ma-0">
+                    {{ 'Quên mật khấu? Nhấn vào'|_ }} <a href="/{{language}}/forgot-password">{{ 'Đây'|_ }} </a>
+                </p>
+            </div>
+        </div>
+        <div class="field_item">
+            <label for=""></label>
+            <div class="field_item__group">
+                <div class="d-block w-100">
+                    <button class="btn_submit_form d-block w-100" type="submit">
+                        {{ 'Đăng nhập'|_ }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="field_item">
+            <label for=""></label>
+            <div class="field_item__group">
+                <div class="w-100">
+                    {% for name, link in social_login_links %}
+                        {% if name == "Facebook"%}
+                            <a href="{{link}}" class="social_btn text-center btn_facebook mb-3 w-100">
+                                <i class="fab fa-facebook-f"></i>
+                                {{ 'Đăng nhập bằng Facebbook'|_ }}
+                            </a>
+                        {% else %}
+                            <a href="{{link}}" class="social_btn text-center btn_google mb-3 w-100">
+                                <i class="fab fa-google"></i>
+                                {{ 'Đăng nhập bằng Google'|_ }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>

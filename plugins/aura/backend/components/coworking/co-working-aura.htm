@@ -2,7 +2,8 @@
     <h2 class="text-center mb-5">
         {{ 'Co-working ở Aura có gì ?'|_ }}                        
     </h2>
-    <div class="box_center_link">
+    <div class="isDesktop">
+        <div class="box_center_link">
         <div class="contain_banner_link contain_banner_link--collapse mr-4">
             <div class="links_box">
                 {% for index,tab in tabs %}
@@ -26,4 +27,36 @@
             </div>
             <img class="img_right" src="{{'assets/images/bg-co-living.png'|theme }}" alt=""/>
         </div>
+    </div>
+    <div class="container isMobile">
+            <div class="box_links_sp1">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home">
+                            Co-working space <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu1">
+                            Event space <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="home" class="container tab-pane active">
+                        <div class="py-2">
+                            <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
+                        </div>
+                    </div>
+                    <div id="menu1" class="container tab-pane fade">
+                        <div class="py-2">
+                            <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     </div>

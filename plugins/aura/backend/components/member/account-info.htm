@@ -1,0 +1,12 @@
+{% if user %}
+<div class="user_customer_item mb-5">
+    <div class="avatar mr-2">{{user.name|getCharacterFirst}}{{user.surname|getCharacterFirst}}</div>
+    <div class="info">
+        <p class="drs">{{ 'Tài khoản của'|_ }} </p>
+        <p class="title">{{user.name}} {{user.surname}}</p>
+        <div class="item">
+            <a class="log-out" data-request="onLogout" data-request-data="redirect: '/'" href="javascript:void(0)">{{ 'Thoát'|_ }}</a>
+        </div>
+    </div>
+</div>
+{% endif %}

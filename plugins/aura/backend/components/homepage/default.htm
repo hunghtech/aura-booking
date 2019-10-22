@@ -8,5 +8,13 @@
 </div>
 {% partial __SELF__~'::aura-district' %}              
 {% partial __SELF__~'::slider' %}        
-{% partial __SELF__~'::aura-store' %}        
-{% partial __SELF__~'::aura-life' %}               
+{% partial __SELF__~'::aura-store' %}   
+<div class="contain_stay section py-5">
+    <div class="container">
+        <h2 class="mb-5">
+            {{ 'Cuộc sống tại Aura'|_ }}
+        </h2>
+        {% partial __SELF__~'::aura-life-desktop' %}               
+        {% partial __SELF__~'::aura-life-mobile' %}               
+    </div>
+</div>

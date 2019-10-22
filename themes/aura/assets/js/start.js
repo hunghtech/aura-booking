@@ -1,63 +1,113 @@
-
+var AURA = AURA || {};
 $(document).ready(function () {
-    $(document).ready(function() {
-        $(window).on('load', function () {
-            var nowTemp = new Date();
-            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    $(window).on('load', function () {
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-            $('.datepicker').datepicker({
-              onRender: function(date) {
+        $('.datepicker').datepicker({
+            onRender: function (date) {
                 return date.valueOf() < now.valueOf() ? 'disabled' : '';
-              }
-            });
-            new WOW().init();
-            $('body').addClass('loaded');
-            $("#carouselExampleIndicators1").on('slide.bs.carousel', function (data) {
-                // do something...
-                // console.log(data.to)
-                $("#carouselExampleIndicators1-1").carousel(data.to);
-                console.log($(this).attr("id"))
-            })
-            $("#carouselExampleIndicators2").on('slide.bs.carousel', function (data) {
-                // do something...
-                // console.log(data.to)
-                $("#carouselExampleIndicators2-2").carousel(data.to);
-            })
-            /*$('.link_tab_direct').on('click', function () {
-                var tab = $(this).data('href')
-                $('.nav-tabs a[href="#'+tab+'"]').tab('show')
-                // $('.link_tab_direct').siblings().removeClass('active');
-                // $(this).addClass('active');
-            })*/
-            $('.nav-tab-product[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                // e.target // newly activated tab
-                // e.relatedTarget // previous active tab
-                var crs = "#" + $(e.target).attr("data-carousel");
-                $("#carousel-event").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
-                $(crs).addClass('carousel-even--active');
-            });
-            
-            $('.nav-tab-working[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                // e.target // newly activated tab
-                // e.relatedTarget // previous active tab
-                var crs = "#" + $(e.target).attr("data-carousel");
-                $("#carousel-working").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
-                $(crs).addClass('carousel-even--active');
-            });
+            }
+        });
+        new WOW().init();
+        AURA.openNav();
+        AURA.closeNav();
 
-            $('.accordion--sanpham').on('shown.bs.collapse', function (e) {
-                // do something...
-                console.log($(e.target).attr("data-carouse"), e.target)
-                var crs = "#" + $(e.target).attr("data-carouse");
-                $('.active_show').removeClass('active_show');
-                $(crs).addClass('active_show');
-            })
+        // parallax
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
 
+
+        $('body').addClass('loaded');
+        $("#carouselExampleIndicators1").on('slide.bs.carousel', function (data) {
+            // do something...
+            // console.log(data.to)
+            $("#carouselExampleIndicators1-1").carousel(data.to);
+            console.log($(this).attr("id"))
         })
+        $("#carouselExampleIndicators2").on('slide.bs.carousel', function (data) {
+            // do something...
+            // console.log(data.to)
+            $("#carouselExampleIndicators2-2").carousel(data.to);
+        })
+        /*$('.link_tab_direct').on('click', function () {
+         var tab = $(this).data('href')
+         $('.nav-tabs a[href="#'+tab+'"]').tab('show')
+         // $('.link_tab_direct').siblings().removeClass('active');
+         // $(this).addClass('active');
+         })*/
+        $('.nav-tab-product[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // e.target // newly activated tab
+            // e.relatedTarget // previous active tab
+            var crs = "#" + $(e.target).attr("data-carousel");
+            $("#carousel-event").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
+            $(crs).addClass('carousel-even--active');
+        });
+
+        $('.nav-tab-working[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // e.target // newly activated tab
+            // e.relatedTarget // previous active tab
+            var crs = "#" + $(e.target).attr("data-carousel");
+            $("#carousel-working").find($('.carousel-even.carousel-even--active')).removeClass('carousel-even--active');
+            $(crs).addClass('carousel-even--active');
+        });
+
+        $('.accordion--sanpham').on('shown.bs.collapse', function (e) {
+            // do something...
+            console.log($(e.target).attr("data-carouse"), e.target)
+            var crs = "#" + $(e.target).attr("data-carouse");
+            $('.active_show').removeClass('active_show');
+            $(crs).addClass('active_show');
+        })
+
+        $("body").delegate(".nav-menu", "click", function () {
+            var type = $(this).attr('data-type');
+            $('.nav-menu').removeClass('active');
+            $(this).addClass('active');
+            $('.tab').addClass('hidden');
+            $('.' + type).removeClass('hidden');
+        });
+
     })
 });
 
+AURA.bookRoomSuccess = function () {
+    swal({
+        title: "Thông báo!",
+        text: "Đặt phòng thành công! Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của Aura!",
+        type: "success"
+    });
+}
 
+AURA.errorSignin = function (jqXHR)
+{
+    $('.error-signin').show();
+}
+AURA.errorRegister = function (jqXHR)
+{
+    $('.error-register').show();
+}
+
+AURA.registerSuccess = function () {
+    swal({
+        title: "Thông báo!",
+        text: "Đăng ký thành công!",
+        type: "success"
+    });
+}
+AURA.openNav = function () {
+    $("body").delegate(".navbar-toggler-icon", "click", function () {
+        $("#mySidenav").fadeIn(1000);
+       //document.getElementById("mySidenav").style.width = "100%"; 
+    });    
+}
+
+AURA.closeNav = function () {
+    $("body").delegate(".closebtn", "click", function () {
+        $("#mySidenav").fadeOut(1000);
+       //document.getElementById("mySidenav").style.width = "0"; 
+    });
+}
 
 var isMobile = {
     Android: function () {

@@ -1,7 +1,7 @@
 description = "Header of layout"
 [lang]
 ==
-<div class="container">
+<div class="container isDesktop">
     <div class="lan_top">
         <a href="/en" class="lan_item {{language == 'en'?'active':''}}">en</a>
         <a href="/vn" class="lan_item {{language == 'vn'?'active':''}}">vi</a>
@@ -10,28 +10,147 @@ description = "Header of layout"
 
 <div class="topbar">
     <div class="container">
-        <div class="d-flex justify-content-between topbar--container">
-            <h1 class="logo flex-shrink-1">
-                <a href="/{{language}}">
-                    <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
-                </a>
-            </h1>            
-            <div class="d-flex nav_right">
-                <ul class="d-flex align-items-center list-nav-menu">
-                    {% for menu in menuList %}
-                    <li class="nav_item">
-                        <a href="/{{language}}/{{menu.link}}" class="link_item {{this.page.tab == menu.lang(language).title?'active':''}}">{{menu.lang(language).title}}</a>
-                        {{menu.id|getChildrenMenu}}
-                    </li>                                        
-                    {% endfor %}
-                    <li>
-                        <a href="/{{language}}/dat-phong" class="link_order_room">
+        <!--Menu Desktop-->
+        <div class="isDesktop">
+            <div class="d-flex justify-content-between topbar--container">
+                <h1 class="logo flex-shrink-1">
+                    <a href="/{{language}}">
+                        <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
+                    </a>
+                </h1>
+                <div class="d-flex nav_right">
+                    <ul class="d-flex align-items-center list-nav-menu">
+                        {% for menu in menuList %}
+                        <li class="nav_item">
+                            <a href="/{{language}}/{{menu.link}}" class="link_item {{this.page.tab == menu.lang(language).title?'active':''}}">{{menu.lang(language).title}}</a>
+                            {{menu.id|getChildrenMenu}}
+                        </li>
+                        {% endfor %}
+                        <li>
                             <!--Đặt Phòng-->
-                            <img src="{{ 'assets/images/btn_dp.png'|theme }}" alt=""/>
-                        </a>
-                    </li>
-                </ul>
+                            <div class="mt-4 d-flex justify-content-end">
+                                <a href="/{{language}}/dat-phong" class="link_box btn-dp mb-4">
+                                    {{ 'Đặt phòng'|_ }} <img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <!--Menu Mobile-->
+        <div class="isMobile">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-mobile px-0">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler mr-2" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="/{{language}}" class="navbar-brand">
+                        <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="mr-0">
+                        <a href="/{{language}}/dat-phong" class="link_order_room">
+                            Đặt phòng <img src="{{ 'assets/images/arr_link.png'|theme }}" alt=""/>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="sidenav" id="mySidenav">
+                    <ul class="navbar-nav mr-auto">
+                        <li>
+                            <span class="navbar-toggler-icon closebtn"></span>                            
+                        </li>                      
+                        <li>
+                            <a href="/{{language}}" class="navbar-brand">
+
+                                <img src="{{ 'assets/images/Logo.png'|theme }}" alt=""/>
+                            </a>
+                        </li>
+                        {% for index,menu in menuList %}
+                        {% if(index == 0)%}
+                        <li class="nav-item dropdown">
+                            <a href="/{{language}}/{{menu.link}}" class="nav-link dropdown-toggle {{this.page.tab == menu.lang(language).title?'active':''}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menu.lang(language).title}}</a>
+                            {{menu.id|getChildrenMenuMobile}}
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {{this.page.tab == menu.lang(language).title?'active':''}}"" href="/{{language}}/{{menu.link}}">{{menu.lang(language).title}}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>                    
+                    <div class="container">
+                        <div class="d-flex">
+                            <div class="ml-auto">
+                                <div class="d-flex flex-wrap">
+                                    <div class="item item-info-foo px-3 pb-3">
+                                        <p class="d-flex align-items-center social_foo hidden">
+                                            <a href="#" class="text-white fab fa-youtube"></a>
+                                            <a href="#" class="text-white fab fa-instagram"></a>
+                                            <a href="#" class="text-white fab fa-facebook"></a>
+                                        </p>
+                                        <p class="text-white">
+                                            {{ 'Về chúng tôi'|_ }}
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">{{ 'Dịch vụ'|_ }}</a>
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">> Co-working</a>
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">> Co-livings</a>
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">{{ 'Địa điểm'|_ }}</a>
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">{{ 'Thành viên'|_ }}</a>
+                                        </p>
+                                        <p>
+                                            <a class="link_foo" href="#">{{ 'Về Aura'|_ }}</a>
+                                        </p>
+                                    </div>
+                                    <div class="item item-info-foo px-3 pb-3">                                        
+                                        <p class="text-white">
+                                            {{ 'Liên lạc'|_ }}
+                                        </p>
+                                        <p class="pt-2">
+                                            Aura District
+                                        </p>
+                                        <p class="pt-2">
+                                            <span class="pt-3">{{ '1 – 3, đường D4, KDC Him Lam'|_ }}, </span><br/>
+                                            <span class="pt-3">{{ 'P.Tân Hưng, Quận 7, TP.HCM, Việt Nam'|_ }} </span><br/>
+                                            <i class="fas fa-phone pt-4"></i> &nbsp;+84 90 6049391 <br/>
+                                            <i class="far fa-paper-plane pt-4"></i>&nbsp; info@auradistrict.com
+                                        </p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social_box">
+                        <div class="lan_top">
+                            <a href="/en" class="lan_item {{language == 'en'?'active':''}}">en</a>
+                            <a href="/vn" class="lan_item {{language == 'vn'?'active':''}}">vi</a>
+                        </div>
+                        <div>
+                            <p class="d-flex align-items-center social_foo pt-3">
+                                <a href="#" class="text-white fab fa-youtube ml-0"></a>
+                                <a href="#" class="text-white fab fa-instagram"></a>
+                                <a href="#" class="text-white fab fa-facebook"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </nav>       
+        </div>
+        <!-- End Menu-->
+
     </div>
 </div>

@@ -1,4 +1,4 @@
-.orange{
+.product .orange{
     background-image: url(../images/Workingroom_bg.png) !important;
 }
 .carousel_content{
@@ -20,4 +20,208 @@
 }
 .contain_subscribe--form button img{
     cursor: pointer;
+}
+.form_info_account .field_item button{
+    background: #fb0;
+    color: #000;
+    font-size: 16px;
+}
+.btn-register{
+    background: #00adee !important;
+    color:#fff !important;
+}
+.social_btn{
+    font-size: 16px;
+}
+.log-out{
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #00adee;
+    color: #fff;
+    padding: 5px 0;
+    height: 35px;
+    width: 90px;
+    border-radius: 21px;
+    font-size: 18px;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.btn-dp{
+	font-size:16px !important;
+	width:120px !important;
+}
+.contain_banner_link .links_box .item{
+	font-size:28px !important;
+}
+/*homepage*/
+.contain_subscribe--form input{
+    font-size: 20px;
+    padding: 10px 50px;
+}
+.navbar-mobile .navbar-toggler .navbar-toggler-icon{
+    width: 35px;
+}
+.navbar-brand img{
+    width: 120px;
+}
+/*Mobile*/
+/*menu*/
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+    padding-top: 60px;    
+    display: none;
+    background-image: url(../images/bh-menu-mobile.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 23px;
+    color: #fff !important;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+.sidenav .dropdown{
+    margin-top: 30px;
+}
+.sidenav .nav-item{
+    position: relative;
+    display: block;
+    padding: 5px 25px;    
+    cursor: pointer;
+}
+.nav-item:before{
+    content: "";
+    border-top: 2px solid #000;
+    max-width: 320px;
+    height: 8px;
+    display: block;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    font-size: 25px;
+    color: #fff !important;
+}
+.sidenav .navbar-brand img{
+    width: 120px;
+    margin-top: -52px;
+    left: 58px;
+    display: block;
+    position: relative;
+}
+.sidenav .item-info-foo:first-child{
+    width: 40%;    
+    text-align: left;
+}
+.sidenav .item-info-foo:first-child a{
+    color:#000 !important;
+}
+.sidenav .item-info-foo:last-child{
+    width: 60%;    
+    text-align: left;    
+}
+.sidenav .item-info-foo a{
+    font-size: 13px;
+    padding: 5px 0;
+    color:#000;
+}
+.sidenav .fab {
+    font-size: 35px !important;
+    text-align: left;
+    right: 50px;
+    position: relative;
+    padding: 0 5px !important;
+}
+.social_box{
+    display: flex;
+    justify-content: space-between;    
+}
+.social_box .lan_top{
+    padding: 20px 30px;
+}
+.contain_banner_link .links_box .item{
+    background-color: #fff;
+}
+.btn-dp:hover{
+  background: #fb0;   
+}
+/*About Us*/
+.box_about_top h2{
+    font-size: 1.75rem;
+}
+/*Footer*/
+.box_animate_foo{
+    width: 50%;
+}
+.box_animate_foo .pos-relative{
+    height: 320px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+@media (max-width: 575px){
+    .slogan_item .img {
+        height: auto;
+        width: 60%;
+        margin-left: 4rem;
+        margin-bottom: 15px;
+    }
+    .footerMobile .item-info-foo {
+        text-align: right;        
+        top: 20px;
+        position: relative;
+        font-size: 35px;
+    }
+    .footer_page {
+        height: 270px;
+    }
+    .box_animate_foo .pos-relative{
+        height: 200px;
+    }
+    .caption_banner {
+        top:70px;
+    }
+    .content_about_slogan .box-info{
+        width: auto;
+    }
+    .navbar-mobile .dropdown-menu{
+        background: none;
+        box-shadow:none;
+    }
+    .sidenav .nav-item:last-child{
+        margin-bottom: 20px;
+        
+    }
+    .sidenav .nav-item:last-child:after{
+        display: block;
+        content: '';
+        border-bottom: 2px solid #000;
+    }
+}
+@media (max-width: 991px){
+    .contain_links_visit .box-coming .drs {
+        width: 100%;
+    }
 }

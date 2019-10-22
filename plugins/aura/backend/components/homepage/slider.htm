@@ -9,7 +9,9 @@
                         <h3 class="my-4">
                             {{banner.lang(language).title}}
                         </h3>
-                        {{banner.lang(language).content}}
+                        <p class="pl-0 ml-sm-4">
+                            {{banner.lang(language).content}}
+                        </p>
                     </div>
                     <div class="pic_inner">
                         <img src="/storage/app/media{{banner.image}}" alt=""/>
@@ -21,7 +23,7 @@
         </div>
         <div class="slide_dot_both">
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <img src="{{ 'assets/images/Asset74.png'|theme }}" alt=""/>                
+                <img src="{{ 'assets/images/Asset74.png'|theme }}" alt=""/>
             </a>
             <ol class="carousel-indicators">
                 {% for index,banner in banners %}
@@ -31,7 +33,7 @@
                 {% endfor %}
             </ol>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <img src="{{ 'assets/images/Asset74.png'|theme }}" alt="" style="transform: scale(-1)"/>                
+                <img src="{{ 'assets/images/Asset74.png'|theme }}" alt="" style="transform: scale(-1)"/>
             </a>
         </div>
 

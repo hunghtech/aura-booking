@@ -1,0 +1,52 @@
+<div class="content_phongdadat mb-5">
+    <h2 class="mb-4">
+        {{ 'Thông tin tài khoản'|_ }}
+    </h2>
+    <div class="tab-content tab-content-aura" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel"
+             aria-labelledby="home-tab">
+            <form method="post" data-request="accountAura::onUpdateUser" action="" class="form_info_account mt-5">
+                <div class="field_item">
+                    <label for="">{{ 'Họ tên'|_ }}</label>
+                    <input type="text" name="name" value="{{user.name}}" placeholder="Họ tên" required>
+                </div>
+                <div class="field_item">
+                    <label for="">Email</label>
+                    <input type="email" name="email" value="{{user.email}}" required>
+                </div>
+                <div class="field_item">
+                    <label for="">{{ 'Mật khẩu'|_ }}</label>
+                    <input type="password" minlength="6" maxlength="25" name="password" value="{{user.password}}" readonly>
+                </div>
+                <div class="field_item">
+                    <label for="">Giới tính</label>
+                    <div class="field_item__group">
+                        <label class="container_check mr-4">{{ 'Nam'|_ }}
+                            <input type="radio" {{user.gender == "Male"?"checked":""}} value="{{ 'Nam'|_ }}" name="gender">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container_check">{{ 'Nữ'|_ }}
+                            <input type="radio" {{user.gender == "Female"?"checked":""}} value="{{ 'Nữ'|_ }}" name="gender">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field_item">
+                    <label for="">{{ 'Ngày sinh'|_ }}</label>
+                    <input type="text" class="datepicker" value="{{user.dob}}" name="dob" required>
+                </div>
+                <div class="field_item">
+                    <label for=""></label>
+                    <div class="field_item__group justify-content-end">
+                        <button class="btn_submit_form btn-register" type="submit">
+                            {{ 'Cập nhật'|_ }}
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>

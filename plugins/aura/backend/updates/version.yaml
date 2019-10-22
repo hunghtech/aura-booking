@@ -101,3 +101,6 @@
 1.0.35:
     - 'Updated table aura_backend_room'
     - builder_table_update_aura_backend_room_4.php
+1.0.36:
+    - 'Created table aura_backend_book_room'
+    - builder_table_create_aura_backend_book_room.php

@@ -1,35 +1,49 @@
 <div class="section pt-5 mt-5">
-    <div class="bd-example">
-
-        <div id="carousel_diadiem_09" class="carousel carousel_diadiem slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-                {% for i in 0..(sliders|length - 1) %}
-                <li data-target="#carousel_diadiem_09" data-slide-to="{{i}}" class="{{i ==0 ?'active':''}}"></li>
-                {% endfor %}
-            </ol>
-
-            <div class="carousel-inner">
-                {% for index,slider in sliders%}
-                <div class="carousel-item {{index == 0?'active':''}}">
-                    <div class="content_carousel_diadiem">
-                        <div class="pic">
-                            <img src="/storage/app/media{{slider.image}}"/>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h2>{{slider.lang(language).title}}</h2>
-                            <p>
-                                {{slider.lang(language).content}}
-                            </p>
+        <div class="bd-example">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap">
+                <div class="left_item order-2 order-md-1">
+                    <div class="text-left">
+                        <h2>Aura <br/>
+                            Him Lam</h2>
+                        <p class="mb-5">
+							{{ ' Aura District Him Lam sở hữu không gian mở hiện đại, tích hợp mọi tiện nghi bạn cần.
+                            Kết nối tới trung tâm Sài Gòn và các quận lân cận cực nhanh chóng'|_ }}.                        
+                        </p>
+                        <div class="icon_both_carousel">
+                            <div>
+                                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                            </div>
+							<img src="{{'assets/images/plus.png'|theme }}" alt=""/>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-            <div class="icon_both_carousel">
-                <img src="{{'assets/images/star.png'|theme }}" alt=""/>
-                <img src="{{'assets/images/plus.png'|theme }}" alt=""/>
+                <div id="carousel_diadiem_09" class="carousel carousel_diadiem slide order-1 order-md-2" data-ride="carousel">
+
+					<div class="carousel-inner">
+						{% for index,slider in sliders%}
+						<div class="carousel-item {{index == 0?'active':''}}">
+							<div class="content_carousel_diadiem">
+								<div class="pic">
+									<img src="/storage/app/media{{slider.image}}"/>
+								</div>
+								<!--<div class="carousel-caption d-none d-md-block text-left">
+									<h2>{{slider.lang(language).title}}</h2>
+									<p>
+										{{slider.lang(language).content}}
+									</p>
+								</div>-->
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+
+                    <ol class="carousel-indicators">
+                        {% for i in 0..(sliders|length - 1) %}
+                        <li data-target="#carousel_diadiem_09" data-slide-to="{{i}}" class="{{i ==0 ?'active':''}}"></li>
+                        {% endfor %}
+                    </ol>
+				</div>
             </div>
         </div>
     </div>
-</div>
+

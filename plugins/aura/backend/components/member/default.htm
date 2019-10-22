@@ -1,0 +1,28 @@
+<div class="section my-5">
+    <div class="container">
+        {% partial __SELF__~'::account-info' %}
+        <div class="content_form_price">
+            {% partial __SELF__~'::nav-menu' %}
+            <div class="right_content_info">
+                <div class="tab account">
+                    {% if (user == "")%}
+                        {% partial __SELF__~'::form-account' %}
+                    {% else %}
+                    {% partial __SELF__~'::user-profile' %}
+                    {% endif %}
+                </div>
+                <div class="tab room hidden">
+                    {% if (user)%}
+                        {% partial __SELF__~'::history-book-room' %}
+                    {% else %}
+                        <p>{{ 'Hiện tại chưa có lịch sử đặt phòng'|_ }}</p>
+                    {% endif %}
+                </div>
+                <div class="tab faq hidden">
+                    {% partial __SELF__~'::faq' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
