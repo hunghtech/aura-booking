@@ -1,4 +1,8 @@
 fields:
+    title:
+        label: 'Tiêu đề'
+        type: text
+        span: auto
     thumbnail:
         label: 'Hình ảnh'
         mode: image

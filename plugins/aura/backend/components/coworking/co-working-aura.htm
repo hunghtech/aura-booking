@@ -1,6 +1,6 @@
 <div class="section pt-5 mt-5">
     <h2 class="text-center mb-5">
-        {{ 'Co-working ở Aura có gì ?'|_ }}                        
+        {{ 'Co-working ở Aura có gì ?'|_ }}
     </h2>
     <div class="isDesktop">
         <div class="box_center_link">
@@ -11,13 +11,13 @@
                    aria-controls="collapseExample{{index+1}}">
                     <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
                     {{tab.lang(language).title}}
-                </a>        
+                </a>
                 <div class="collapse" id="collapseExample{{index+1}}">
                     <div class="collapse-content px-3 py-3">
                             {{tab.lang(language).content|raw}}
                         </div>
                     </div>
-                    {% endfor %}                
+                    {% endfor %}
                     <div class="mt-4 d-flex justify-content-end">
                         <a href="" class="link_box mb-4">
                             {{ 'đặt phòng'|_ }}<img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
@@ -47,16 +47,16 @@
                 <div class="tab-content">
                     <div id="home" class="container tab-pane active">
                         <div class="py-2">
-                            <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
+                            <img class="d-block mx-auto" src="{{'assets/images/bg-space.png'|theme }}" alt="">
                         </div>
                     </div>
                     <div id="menu1" class="container tab-pane fade">
                         <div class="py-2">
-                            <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
+                            <img class="d-block mx-auto" src="{{'assets/images/bg-space.png'|theme }}" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
     </div>

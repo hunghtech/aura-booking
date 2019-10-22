@@ -1,0 +1,44 @@
+<div class="isMobile">
+    <div class="list_contain_slogan section">
+        <div id="carouselExampleIndicators" class="carousel carousel_home slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for index,banner in banners %}
+                <div class="carousel-item {{index ==0 ?'active':''}}">
+                    <div class="pos-relative contain-item">
+                        <div class="pic_inner">
+                            <img src="/storage/app/media{{banner.image}}" alt=""/>
+                        </div>
+                        <div class="caption_inner">
+                            <img src="/storage/app/media{{banner.lang(language).title_image}}" alt=""/>
+                            <h3 class="my-4">
+                                {{banner.lang(language).title}}
+                            </h3>
+                            <p class="pl-0 ml-sm-4">
+                                {{banner.lang(language).content}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="slide_dot_both">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <img src="{{ 'assets/images/Asset74.png'|theme }}" alt=""/>
+                </a>
+                <ol class="carousel-indicators">
+                    {% for index,banner in banners %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{index}}" class="{{index ==0 ?'active':''}}">
+                        {{banner.title_time}}
+                    </li>
+                    {% endfor %}
+                </ol>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <img src="{{ 'assets/images/Asset74.png'|theme }}" alt="" style="transform: scale(-1)"/>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

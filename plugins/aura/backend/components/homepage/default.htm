@@ -1,20 +1,28 @@
-<div class="banner">
-	<img src="{{'assets/images/video-homepage.png'|theme}}" style="width:100%"/>
-    <!--<div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/RK1K2bCg4J8?controls=0"
-                frameborder="0"></iframe>
-    </div>-->
+<div class="isDesktop">
+    <div class="banner">
+        <img src="{{'assets/images/video-homepage.png'|theme}}" style="width:100%"/>
+    </div>
 </div>
-{% partial __SELF__~'::aura-district' %}              
-{% partial __SELF__~'::slider' %}        
-{% partial __SELF__~'::aura-store' %}   
+
+<div class="isMobile">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="500" src="https://www.youtube.com/embed/wnEp8c1eabg?rel=0&amp;autoplay=1&loop=1" frameborder="0"
+                allowfullscreen></iframe>
+    </div>
+</div>
+{% partial __SELF__~'::aura-district' %}
+{% if (is_mobile == "") %}
+    {% partial __SELF__~'::slider-desktop' %}
+{% else %}
+    {% partial __SELF__~'::slider-mobile' %}
+{% endif %}
+{% partial __SELF__~'::aura-store' %}
 <div class="contain_stay section py-5">
     <div class="container">
-        <h2 class="mb-5">
+        <h3 class="mb-5">
             {{ 'Cuộc sống tại Aura'|_ }}
-        </h2>
-        {% partial __SELF__~'::aura-life-desktop' %}               
-        {% partial __SELF__~'::aura-life-mobile' %}               
+        </h3>
+        {% partial __SELF__~'::aura-life-desktop' %}
+        {% partial __SELF__~'::aura-life-mobile' %}
     </div>
 </div>

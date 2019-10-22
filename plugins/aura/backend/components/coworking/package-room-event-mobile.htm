@@ -1,5 +1,5 @@
 <div class="isMobile">
-    <div class="carousel_content">
+    <div class="carousel_content box-event-mobile">
         <div class="right_tab">
             <div class="carousel-caption carousel-caption--working">
                 <div class="banner_caption">
@@ -25,9 +25,9 @@
                         <div class="tab-pane fade {{index == 0?'show active':''}}"
                              id="home{{index + 1}}-mobile"
                              role="tabpanel"
-                             aria-labelledby="home{{index + 1}}-mobile-tab">                            
+                             aria-labelledby="home{{index + 1}}-mobile-tab">
                             <p class="address_text text-left mt-3 mb-3">
-                                {{store.lang(language).address}}       
+                                {{store.lang(language).address}}
                             </p>
                             <div id="carousel-home-mobile-{{index + 1}}"
                                  class="carousel carousel-working carousel-even slide carousel-even--active"
@@ -35,7 +35,7 @@
                                 <ol class="carousel-indicators">
                                      {% for i in 0..(store.roomEventInfo[0]['images']|length - 1) %}
                                     <li data-target="#carousel-home-mobile-{{index + 1}}" data-slide-to="{{i}}" class="{{i ==0?'active':''}}"></li>
-                                    {% endfor %}                                    
+                                    {% endfor %}
                                 </ol>
                                 <div class="carousel-inner  animated fadeInLeftBig">
                                     {% for k,image in  store.roomEventInfo[0]['images']%}
@@ -60,7 +60,7 @@
                                     {% if(store.roomEventInfo|length > 0)%}
                                     {{store.roomEventInfo[0].lang(language)['content']|raw}}
                                 {% endif %}
-                                </div>                                
+                                </div>
                             </div>
                             <div class="text-center w-100 mt-3">
                                 <a href="/{{language}}/dat-phong/{{store.slug}}" class="link_img">

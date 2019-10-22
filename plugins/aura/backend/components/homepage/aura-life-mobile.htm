@@ -17,12 +17,12 @@
                 {% for key,info in item.infos %}
                 <div class="col-4">
                     <div class="contain_stay--box-small mb-4 mb-sm-0">
-                        <img src="/storage/app/media{{info.icon}}" alt=""/>                    
+                        <img src="/storage/app/media{{info.icon}}" alt=""/>
                     </div>
                     <div>
                         {{info.title}}
                     </div>
-                </div>                
+                </div>
                 {% endfor %}
             </div>
             <div class="abs_text">
@@ -35,11 +35,15 @@
         </div>
         {% else %}
         <div class="col-12 col-sm-5 order-1 order-sm-0">
-            <div class="d-flex flex-wrap flex-sm-nowrap justify-content-end">
+            <div class="row">
                 {% for key,info in item.infos %}
-                <div class="contain_stay--box-small mb-4 mb-sm-0">
-                    <img src="/storage/app/media{{info.icon}}" alt=""/>
-                    {{info.title}}
+                <div class="col-4">
+                    <div class="contain_stay--box-small mb-4 mb-sm-0">
+                        <img src="/storage/app/media{{info.icon}}" alt=""/>
+                    </div>
+                    <div>
+                        {{info.title}}
+                    </div>
                 </div>
                 {% endfor %}
             </div>

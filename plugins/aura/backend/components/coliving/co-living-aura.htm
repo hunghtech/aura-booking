@@ -11,13 +11,13 @@
                        aria-controls="collapseExample{{index+1}}">
                         <img src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
                         {{tab.lang(language).title}}
-                    </a>        
+                    </a>
                     <div class="collapse" id="collapseExample{{index+1}}">
                         <div class="collapse-content px-3 py-3">
                             {{tab.lang(language).content|raw}}
                         </div>
                     </div>
-                    {% endfor %}                
+                    {% endfor %}
                     <div class="mt-4 d-flex justify-content-end">
                         <a href="" class="link_box mb-4">
                             {{ 'đặt phòng'|_ }} <img src="{{'assets/images/arr_link.png'|theme }}" width="25" alt=""/>
@@ -27,7 +27,7 @@
             </div>
             <img class="img_right" src="{{'assets/images/bg-co-living.png'|theme }}" alt=""/>
         </div>
-    </div>    
+    </div>
 
     <div class="container isMobile">
         <div class="box_links_sp1">
@@ -39,7 +39,7 @@
                         {{tab.lang(language).title}}
                     </a>
                 </li>
-                {% endfor %}     
+                {% endfor %}
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
@@ -48,10 +48,10 @@
                     <div class="py-2">
                         {{tab.lang(language).content|raw}}
                     </div>
-                    <img class="d-block mx-auto" src="{{'assets/images/space.png'|theme }}" alt="">
-                </div>                
+                    <img class="d-block mx-auto" src="{{'assets/images/bg-space.png'|theme }}" alt="">
+                </div>
                 {% endfor %}
-            </div>            
+            </div>
         </div>
     </div>
 </div>
