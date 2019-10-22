@@ -94,6 +94,9 @@ class Room extends Model
         return $banners;
     }
 
+    public function beforeSave() {
+        $this->slug = str_slug($this->name, '-');
+    }
 
     public static function getListByService($service)
     {

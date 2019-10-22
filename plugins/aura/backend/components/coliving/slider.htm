@@ -13,7 +13,7 @@
                             <p class="link_tab_direct px-3 {{index == 0?'active':'collapsed'}}" type="button"
                                data-toggle="collapse"
                                data-target="#collapse{{index+1}}"
-                               aria-expanded="true" aria-controls="collapse1">
+                               aria-expanded="{{index == 0?'true':'false'}}" aria-controls="collapse1">
                                     <span class="d-flex align-items-center justify-content-between">
                                         {{store.lang(language).name}} <img class="mr-2" src="{{'assets/images/arr_link.png'|theme }}" alt=""/>
                                     </span>

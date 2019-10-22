@@ -1,0 +1,22 @@
+columns:
+    user_id:
+        label: user_id
+        type: number
+    building_id:
+        label: building_id
+        type: number
+    from_date:
+        label: from_date
+        type: text
+    to_date:
+        label: to_date
+        type: text
+    is_unknown_date:
+        label: is_unknown_date
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    status:
+        label: status
+        type: number

@@ -1,0 +1,65 @@
+<div class="isDesktop">
+    {% for index,item in auraLifes %}
+    <div class="row mb-4">
+        {% if (index %2 == 0)%}
+        <div class="col-12 col-sm-5">
+            <div class="row mb-4 mb-sm-0">
+                <div class="col-6 contain_stay--box-image">
+                    <img src="/storage/app/media{{item.thumbnail1}}" alt=""/>
+                </div>
+                <div class="col-6 contain_stay--box-image">
+                    <img src="/storage/app/media{{item.thumbnail2}}" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-7">
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+                {% for key,info in item.infos %}
+                <div class="contain_stay--box-small mb-4 mb-sm-0">
+                    <img src="/storage/app/media{{info.icon}}" alt=""/>
+                    {{info.title}}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="abs_text">
+                {% if (index == 0)%}
+                <img src="{{'assets/images/work.png'|theme}}" alt=""/>
+                {% elseif (index == 2)%}
+                <img src="{{'assets/images/play.png'|theme}}" alt=""/>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12 col-sm-5 order-1 order-sm-0">
+            <div class="d-flex flex-wrap flex-sm-nowrap justify-content-end">
+                {% for key,info in item.infos %}
+                <div class="contain_stay--box-small mb-4 mb-sm-0">
+                    <img src="/storage/app/media{{info.icon}}" alt=""/>
+                    {{info.title}}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="abs_text mb-4 mb-sm-0">
+                <img src="{{'assets/images/live.png'|theme}}" alt=""/>
+            </div>
+        </div>
+        <div class="col-12 col-sm-7 order-0 order-sm-1 mb-4 mb-sm-0">
+            <div class="row">
+                <div class="col-6">
+                    <div class="contain_stay--box-image">
+                        <img src="/storage/app/media{{item.thumbnail1}}" alt=""/>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="contain_stay--box-image">
+                        <img src="/storage/app/media{{item.thumbnail2}}" alt=""/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+</div>

@@ -1,11 +1,12 @@
 title = "Đặt phòng"
-url = "/dat-phong"
+url = "/dat-phong/:slug?"
 layout = "default"
 is_hidden = 0
 tab ="Đặt phòng"
 show_newletter = false
-[booking-room]
+[bookingRoom]
+slug = "{{ :slug }}"
 ==
-{% component 'booking-room' %}
+{% component 'bookingRoom' %}
 
 

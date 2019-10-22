@@ -173,16 +173,6 @@ class HelperClass {
         return date('d.m.Y', strtotime($date));
     }
 
-    public static function formatPostLinkArticle($slug, $article_slug, $article_id) {
-        if ($slug && $article_slug) {
-            $link = url('/') . "/trends/" . $slug . "/" . $article_id . '-' . $article_slug;
-            return $link;
-        } else {
-            return "/";
-        }
-        return "/";
-    }
-
     public static function checkedFillter($arrFillter, $item) {
         if (in_array($item, $arrFillter)) {
             return "checked";
@@ -213,55 +203,6 @@ class HelperClass {
         return strval($str1) . '-' . strval($str2);
     }
 
-    public static function sendOrderEmail($order_id) {
-        $order = Order::with('items')->find($order_id);
-        if (!$order) {
-            return;
-        }
-        $vars = [
-            'order' => $order
-        ];
-        foreach ($order->items as $item) {
-            $product = $item->product;
-            $idImgProduct = 0;
-            if (count($product->color_images) > 0) {
-                $filterColor = Session::get('filterColor', '');
-                if ($filterColor == '') {
-                    $color = $product->color_images[0];
-                    $colorId = $color->color_id;
-                    $idImgProduct = $color->id;
-                } else {
-                    $arrColor = array_values(array_filter(explode(',', $filterColor)));
-                    $colorImgCurrId = 0;
-                    foreach ($product->color_images as $colorImage) {
-                        $colorTmp = $colorImage->color_id;
-                        $colorTmpId = $colorImage->id;
-                        for ($i = 0; $i < count($arrColor); $i++) {
-                            if ($colorTmp == $arrColor[$i]) {
-                                if ($colorImgCurrId == 0 || $colorTmpId < $colorImgCurrId) {
-                                    $colorImgCurrId = $colorTmpId;
-                                }
-                            }
-                        }
-                    }
-                    $idImgProduct = $colorImgCurrId;
-                }
-            }
-            $item->imageProduct = ColorImageProduct::find($idImgProduct);
-        }
-        //dd($vars);
-        Mail::send('thanhbinhgrand.shop::notification_order', $vars, function($message) use($order) {
-            $message->to($order->customer->email, $order->customer->fullname);
-        });
-
-        Mail::send('thanhbinhgrand.shop::notification_order_to_admin', $vars, function($message) use($order) {
-            $admin_email = Setting::get('admin_email', '');
-            if (!empty($admin_email)) {
-                $message->to($admin_email, 'ThanhBinh Grand');
-            }
-        });
-    }
-
     public static function getTreeChildren($parent_id) {
         $filterCategory = Session::get('filterCategory', '');
         $filterCategory = explode(',', $filterCategory);
@@ -279,14 +220,15 @@ class HelperClass {
             }
         }
     }
-    
+
     public static function getChildrenMenu($parent_id){
         $list = Menu::where('parent_id',$parent_id)->get();
         if(count($list) > 0){
             $translator = Translator::instance();
             $activeLocale = $translator->getLocale();
+			$titleParent = ($activeLocale == "en"?'Services':'Dịch vụ');
             $html  = '<ul class="submenu">';
-            $html .= '<li>dịch vụ</li>';
+            $html .= '<li>'.$titleParent.'</li>';
             foreach($list as $item){
                 $link = $activeLocale."/".$item->link;
                 $html .= ' <li><a href="/'.$link.'">'.$item->lang($activeLocale)->title.'</a></li>';
@@ -296,7 +238,38 @@ class HelperClass {
         }
         else{
             return false;
-        }        
+        }
+    }
+
+    public static function getChildrenMenuMobile($parent_id){
+        $list = Menu::where('parent_id',$parent_id)->get();
+        if(count($list) > 0){
+            $translator = Translator::instance();
+            $activeLocale = $translator->getLocale();
+            $html  = '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
+            foreach($list as $item){
+                $link = $activeLocale."/".$item->link;
+                $html .= ' <a class="dropdown-item" href="/'.$link.'">'.$item->lang($activeLocale)->title.'</a>';
+            }
+            $html .= '</div>';
+            return $html;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static function getCharacterFirst($str) {
+        $ret = '';
+        foreach (explode(' ', $str) as $word)
+            $ret .= strtoupper($word[0]);
+        return $ret;
+    }
+
+    public static function formatDate($date)
+    {
+        $date = date("d-m-Y", strtotime($date));
+        return $date;
     }
 
 }

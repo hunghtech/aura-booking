@@ -1,0 +1,27 @@
+<div class="banner">
+	<img src="{{'assets/images/video-homepage.png'|theme}}" style="width:100%"/>
+</div>
+{% if(language == "vn")%}
+    {% partial __SELF__~'::about-vn' %}
+{% else %}
+    {% partial __SELF__~'::about-en' %}
+{% endif %}
+<div class="section">
+    <div class="container">
+        <p class="font-top mb-5">
+            {{ 'đồng sáng lập'|_ }} :
+        </p>
+        <div class="list_user_about mb-5">
+            <div class="item">
+                <img src="{{'assets/images/about1.png'|theme}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{'assets/images/about2.png'|theme}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{'assets/images/about3.png'|theme}}" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>

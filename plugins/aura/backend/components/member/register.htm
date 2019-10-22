@@ -1,0 +1,42 @@
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <form method="post" data-request="account::onRegister" action="" class="form_info_account mt-5">
+        <div class="field_item">
+            <label for="">{{ 'Họ tên'|_ }}</label>
+            <input type="text" name="name" placeholder="Họ tên" required>
+        </div>
+        <div class="field_item">
+            <label for="">Email</label>
+            <input type="email" name="email" placeholder="example@mailinator.com" required>
+        </div>
+        <div class="field_item">
+            <label for="">{{ 'Mật khẩu'|_ }}</label>
+            <input type="password" minlength="6" maxlength="25" name="password" placeholder="*******" required>
+        </div>
+        <div class="field_item">
+            <label for="">{{ 'Giới tính'|_ }}</label>
+            <div class="field_item__group">
+                <label class="container_check mr-4">{{ 'Nam'|_ }}
+                    <input type="radio" checked="checked" value="{{ 'Nam'|_ }}" name="gender">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container_check">{{ 'Nữ'|_ }}
+                    <input type="radio" value="{{ 'Nữ'|_ }}" name="gender">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="field_item">
+            <label for="">{{ 'Ngày sinh'|_ }}</label>
+            <input type="text" class="datepicker" name="dob" required>
+        </div>
+        <div class="field_item">
+            <label for=""></label>
+            <div class="field_item__group justify-content-end">
+                <button class="btn_submit_form btn-register" type="submit">
+                    {{ 'Tạo tài khoản'|_ }}
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>

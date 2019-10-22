@@ -1,0 +1,78 @@
+<div class="isMobile">
+    <div class="carousel_content">
+        <div class="right_tab">
+            <div class="carousel-caption carousel-caption--working">
+                <div class="banner_caption">
+                    <ul class="nav nav-tabs nav-tabs-aura" id="myTab-mobile" role="tablist">
+                        {% for index,store in stores %}
+                        <li class="nav-item">
+                            <a class="nav-link nav-tab-product {{index == 0?'active':''}}"
+                               id="home{{index+1}}-mobile-tab"
+                               data-toggle="tab"
+                               href="#home{{index+1}}-mobile"
+                               role="tab"
+                               aria-controls="home{{index+1}}-mobile"
+                               aria-selected="true"
+                               data-carousel="carousel-home{{index+1}}-mobile">
+                                <span>{{store.lang(language).name}}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                    <div class="tab-content tab-content-aura" id="myTabContent-mobile">
+                        {% for index,store in stores %}
+                        <div class="tab-pane fade {{index == 0?'show active':''}}"
+                             id="home{{index + 1}}-mobile"
+                             role="tabpanel"
+                             aria-labelledby="home{{index + 1}}-mobile-tab">                            
+                            <p class="address_text text-left mt-3 mb-3">
+                                {{store.lang(language).address}}       
+                            </p>
+                            <div id="carousel-home-mobile-{{index + 1}}"
+                                 class="carousel carousel-working carousel-even slide carousel-even--active"
+                                 data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                     {% for i in 0..(store.roomEventInfo[0]['images']|length - 1) %}
+                                    <li data-target="#carousel-home-mobile-{{index + 1}}" data-slide-to="{{i}}" class="{{i ==0?'active':''}}"></li>
+                                    {% endfor %}                                    
+                                </ol>
+                                <div class="carousel-inner  animated fadeInLeftBig">
+                                    {% for k,image in  store.roomEventInfo[0]['images']%}
+                                    <div class="carousel-item {{k ==0?'active':'' }}">
+                                        <div class="carousel-img">
+                                            <img src="{{image.path}}" class="img_banner d-block">
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p data-toggle="collapse" class="collapse_link_btn"
+                               href="#collapseExample-{{index + 1}}"
+                               role="button"
+                               aria-expanded="false"
+                               aria-controls="collapseExample-{{index + 1}}">
+                                <span>{{ 'xem bảng giá'|_ }}</span>
+                                <img src="{{'assets/images/arr_link.png'|theme}}" alt=""/>
+                            </p>
+                            <div class="collapse collapse_mobile" id="collapseExample-{{index + 1}}">
+                                <div class="p-4">
+                                    {% if(store.roomEventInfo|length > 0)%}
+                                    {{store.roomEventInfo[0].lang(language)['content']|raw}}
+                                {% endif %}
+                                </div>                                
+                            </div>
+                            <div class="text-center w-100 mt-3">
+                                <a href="/{{language}}/dat-phong/{{store.slug}}" class="link_img">
+                                    <img src="{{'assets/images/btn_datphong.png'|theme}}" width="100" class="mx-auto" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

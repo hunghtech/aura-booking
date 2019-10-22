@@ -1,18 +1,24 @@
 {% partial __SELF__~'::slider' %}
 {% partial __SELF__~'::co-living-aura' %}
-{% partial __SELF__~'::package-room' %}
+<div class="section">
+    <h2 class="text-center mt-sm-5 mb-sm-5">      
+        {{ 'Các gói phòng living'|_ }}
+    </h2>
+    {% partial __SELF__~'::package-room-desktop' %}
+    {% partial __SELF__~'::package-room-mobile' %}
+</div>
 <div class="section my-5">
     <div class="container">
         <div class="d-flex justify-content-between my-5">
             <div>
-                <h2>Tìm Aura Him Lam ở đâu?</h2>
+                <h2>{{ 'Tìm Aura Him Lam ở đâu?'|_ }}</h2>
                 <p>
-                    Số 1-3, đuờng D4, KDC Him Lam, P.Tân Hưng, <br/> Quận 7, TP.HCM, Việt Nam.
+                    {{ 'Số 1-3, đuờng D4, KDC Him Lam, P.Tân Hưng'|_ }}, <br/> {{ 'Quận 7, TP.HCM, Việt Nam'|_ }}.
                 </p>
             </div>
             <div>
                 <h2>
-                    Liên lạc
+                    {{ 'Liên lạc'|_ }}
                 </h2>
                 <p>
                     <i class="fas fa-phone"></i> &nbsp;+84 90 6049391 <br/>
@@ -25,7 +31,7 @@
         </div>
     </div>
     <div class="box_map">
-        <img src="images/map.png" alt=""/>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7839.823937316124!2d106.69278412286299!3d10.741267901311659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zMSDigJMgMyDEkcaw4budbmcgRDQsIEtEQyBIaW0gTGFtLCBQLlTDom4gSMawbmcsIFF14bqtbiA3LCBUUC5IQ00sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1569311335009!5m2!1svi!2s" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 </div>
 {% partial __SELF__~'::faq' %}
