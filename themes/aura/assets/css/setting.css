@@ -197,6 +197,63 @@
 .box_animate_foo .pos-relative{
     height: 320px;
 }
+
+/*Loading*/
+/*Loging*/
+body.loaded .loading_page {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -10000;
+}
+.loading_page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6,30,25,.95);
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s linear;
+}
+.loading_page .bg_img {
+    width: 177px;
+}
+.loading_page .bg_img {
+    width: 185px;
+    height: 75px;
+    background: url(../images/icon-loading.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ScrollToTop */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 18px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 99999;
+}
+.back-to-top i {
+    display: block;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color:#fb0;
+    border-radius: 0px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
