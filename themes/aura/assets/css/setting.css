@@ -384,8 +384,11 @@ body.loaded .loading_page {
 }
 @media (max-width: 767px){
    .nav-tabs-aura .nav-item {
-    width: auto;
-} 
+        width: auto;
+    } 
+    .title-aura-life{
+        text-align: center;
+    }
 }
 
 @media (max-width: 991px){

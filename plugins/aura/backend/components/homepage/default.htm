@@ -5,16 +5,15 @@
 </div>
 
 <div class="isMobile">
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="500" src="https://www.youtube.com/embed/wnEp8c1eabg?rel=0&amp;autoplay=1&loop=1" frameborder="0"
-                allowfullscreen></iframe>
+    <div class="embed-responsive embed-responsive-16by9">        
+        <div id="player"></div>
     </div>
 </div>
 {% partial __SELF__~'::aura-district' %}
 {% if (is_mobile == "") %}
-    {% partial __SELF__~'::slider-desktop' %}
+{% partial __SELF__~'::slider-desktop' %}
 {% else %}
-    {% partial __SELF__~'::slider-mobile' %}
+{% partial __SELF__~'::slider-mobile' %}
 {% endif %}
 {% partial __SELF__~'::aura-store' %}
 <div class="contain_stay section py-5">
@@ -26,3 +25,51 @@
         {% partial __SELF__~'::aura-life-mobile' %}
     </div>
 </div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '100%',
+            width: '100%',
+            fitToBackground: true,
+            videoId: 'wnEp8c1eabg',
+            playerVars: {
+                'autoplay': 1,
+                'controls': 0,
+                'autohide': 1,
+                'enablejsapi': 1,
+                'loop': 1,
+                'disablekb': 1,
+                'fs': 0,
+                'modestbranding': 0,
+                'showinfo': 0,
+                'color': 'white',
+                'theme': 'light',
+                'rel': 0,
+                'playlist': 'wnEp8c1eabg'
+            },
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+        player.mute();
+        player.setVolume(0);
+        //player.setSize(1920, 1080);
+        player.setLoop(true);
+        player.setPlaybackQuality('hd1080');
+    }
+</script>
