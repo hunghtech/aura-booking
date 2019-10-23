@@ -141,8 +141,8 @@ AURA.owlCarousel = function () {
         mouseDrag: false,
         touchDrag: true,
         navigationText: [
-            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            '<div class="prev"></div>',
+            '<div class="next"></div>'
         ],
         autoPlay: 5000,
         items: 3,
