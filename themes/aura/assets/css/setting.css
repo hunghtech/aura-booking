@@ -48,11 +48,11 @@
     display: none;
 }
 .btn-dp{
-	font-size:16px !important;
-	width:120px !important;
+    font-size:16px !important;
+    width:120px !important;
 }
 .contain_banner_link .links_box .item{
-	font-size:28px !important;
+    font-size:28px !important;
 }
 /*homepage*/
 .contain_subscribe--form input{
@@ -159,7 +159,7 @@
     background-color: #fff;
 }
 .btn-dp:hover{
-  background: #fb0;
+    background: #fb0;
 }
 .contain_stay--box-small img{
     width: 65px;
@@ -174,10 +174,75 @@
 .box_about_top h2{
     font-size: 1.75rem;
 }
+.list_user_about .item{
+    width: 100%;
+}
+.list_user_about {
+    position: relative;    
+}
+.list_user_about .owl-buttons{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+.list_user_about .owl-prev, .owl-next {
+    position: absolute;
+    height: 30px;
+    color: inherit;
+    background: none;
+    border: none;
+    z-index: 100;    
+}
+.list_user_about .owl-prev i, .list_user_about .owl-next i {
+    font-size: 20px;
+    color: #fb0;
+}
+.owl-prev {
+    left: 0;
+}
+.owl-next {
+    right: 0;
+}
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+        touch-action: auto;
+}
 /*Co-Living*/
 .isMobile .box-living-mobile{
     background-image: url(../images/bg-living-mobile.png);
 }
+.isDesktop .carousel_content{
+    background-size: 100% 80%;
+}
+.carousel_content .owl-buttons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.carousel_content .owl-prev, .carousel_content .owl-next {
+    position: absolute;
+    z-index: 100;   
+    background:none !important;
+}
+.carousel_content .prev{
+    display: none !important;
+}
+.carousel_content .next{
+    background-image: url(../images/arr_link.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 27px;
+    background-color: #fff !important;
+    width: 35px;
+    opacity: 1;
+}
+.carousel_content .owl-next{
+    right: -50px;
+    top: -3px;
+}
+
 /*Co-Working*/
 
 .isMobile .box-event-mobile{
@@ -309,7 +374,20 @@ body.loaded .loading_page {
     .embed-responsive{
         height: 530px;
     }
+    .my-5, .mt-5, .pt-5{
+        margin-top:0px !important;
+        margin-bottom:0 !important;
+    }
+    .carousel_content .owl-prev, .carousel_content .owl-next{
+        opacity: 1 !important;
+    }
 }
+@media (max-width: 767px){
+   .nav-tabs-aura .nav-item {
+    width: auto;
+} 
+}
+
 @media (max-width: 991px){
     .contain_links_visit .box-coming .drs {
         width: 100%;

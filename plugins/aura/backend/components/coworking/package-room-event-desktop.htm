@@ -28,7 +28,7 @@
                         {% for index,store in stores %}
                         <li class="nav-item">
                             <a class="nav-link nav-tab-product {{index == 0?'active':''}}"
-                               id="home1-tab"
+                               id="home{{index+1}}-tab"
                                data-toggle="tab"
                                href="#home{{index+1}}"
                                role="tab"
