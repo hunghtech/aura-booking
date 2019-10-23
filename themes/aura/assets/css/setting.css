@@ -425,6 +425,9 @@ body.loaded .loading_page {
     .title-aura-life{
         text-align: center;
     }
+    .carousel-img .img_banner{
+        height: 280px;
+    }
 }
 
 @media (max-width: 991px){
