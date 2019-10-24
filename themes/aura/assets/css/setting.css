@@ -65,6 +65,30 @@
 .navbar-brand img{
     width: 120px;
 }
+.btn_box_shadow{
+    padding: 6px 15px;
+    background:#fb0;
+    box-shadow: 0 9px 0 #d4a522;
+}
+.btn_box_shadow:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(212, 165, 34,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(212, 165, 34,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(212, 165, 34,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+.btn_box_shadow:hover{
+    color: #fff;
+}
+.text-commingsoon{
+    position: absolute;
+    font-size: 24px;
+    top: 30%;
+    left: 30%;
+}
+.disabled{
+    opacity: .1 !important;
+}
 /*Mobile*/
 /*menu*/
 .sidenav {
@@ -285,12 +309,49 @@
 .carousel_content_full{
     background-size: 120% 85% !important;
 }
+.btn-service{
+    padding: 5px;
+    font-size: 17px;
+}
+.nav-tabs-aura .nav-item:last-child .nav-link.active:after{
+    background: none;
+}
+.nav-tabs-aura .nav-item:last-child .nav-link.active:before{
+    background: none;
+}
+.carousel_content .nav-tabs .nav-item{
+    margin-bottom: 0px;
+}
+.nav-tabs-aura .owl-item:not(:first-child) .nav-link{
+    border-left: 2px solid #000 !important;
+}
 /*Footer*/
 .box_animate_foo{
     width: 50%;
 }
 .box_animate_foo .pos-relative{
     height: 320px;
+    overflow-x: visible;
+}
+@keyframes a {
+    0% {
+        left: -10%;
+        visibility: visible;
+    }
+    60% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        left: 100%;
+    }
 }
 
 /*Loading*/
@@ -419,7 +480,7 @@ body.loaded .loading_page {
     }
 }
 @media (max-width: 767px){
-   .nav-tabs-aura .nav-item {
+    .nav-tabs-aura .nav-item {
         width: auto;
     }
     .title-aura-life{
@@ -427,6 +488,39 @@ body.loaded .loading_page {
     }
     .carousel-img .img_banner{
         height: 280px;
+    }
+    .text-commingsoon{
+        font-size: 20px;
+        top: 20%;
+        left: 20%;
+    }
+    .back-to-top i{
+        width: 30px;
+        height: 35px;
+        line-height: 35px;
+    }
+    @keyframes a {
+        0% {
+            left: -10%;
+            visibility: visible;
+        }
+        30% {
+            opacity: 1;
+        }
+        35% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+            left: 100%;
+        }
+    }
+    .list_contain_slogan .carousel_home .contain-item .caption_inner{
+        min-height: 350px;
     }
 }
 

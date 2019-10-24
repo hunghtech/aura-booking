@@ -1,8 +1,8 @@
 <div class="isDesktop">
     <div class="carousel_content" id="carousel-event">
         <div class="lef_img">
-            {% for index,store in stores %}
-            <div id="carousel-home{{index + 1}}" class="carousel carousel-working carousel-even slide {{index ==0?'carousel-even--active':''}}" data-ride="carouse{{index + 1}}">
+            {% for index,store in stores %} 
+            <div id="carousel-home{{index + 1}}" class="carousel carousel-working carousel-even slide {{index ==0?'carousel-even--active':''}} {{store.status !=1?'disabled':''}}"  {{store.status !=1?'data-interval="false"':''}} data-ride="carouse{{index + 1}}">
                 <ol class="carousel-indicators">
                     {% for i in 0..(store.roomEventInfo[0]['images']|length - 1) %}
                     <li data-target="#carousel-home{{index + 1}}" data-slide-to="{{i}}" class="{{i ==0?'active':''}}"></li>
@@ -27,7 +27,7 @@
                     <ul class="nav nav-tabs nav-tabs-aura" id="myTab" role="tablist">
                         {% for index,store in stores %}
                         <li class="nav-item">
-                            <a class="nav-link nav-tab-product {{index == 0?'active':''}}"
+                            <a class="nav-link nav-tab-product {{index == 0?'active':''}} {{store.status !=1?'disabled':''}}"
                                id="home{{index+1}}-tab"
                                data-toggle="tab"
                                href="#home{{index+1}}"
@@ -51,19 +51,19 @@
                                 {{store.lang(language).address}}                                
                             </p>                            
                             {% if(store.roomEventInfo|length > 0)%}
-                                {{store.roomEventInfo[0].lang(language)['content']|raw}}
+                            {{store.roomEventInfo[0].lang(language)['content']|raw}}
                             {% endif %}
                             <div class="row">
                                 <div class="col-6"></div>
                                 <div class="col-6 text-right">
-                                    <a href="/{{language}}/dat-phong/{{store.slug}}" class="link_img link_img--right">
-                                        <img src="{{'assets/images/btn_datphong.png'|theme}}" alt=""/>
+                                    <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn_box_shadow float-right mt-3 btn-service">                        
+                                        {{ 'Đặt phòng'|_ }} <img class="ml-2" src="{{'assets/images/arr_link.png'|theme}}" alt=""/>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
-                        
+
                     </div>
                 </div>
             </div>

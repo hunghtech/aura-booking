@@ -6,7 +6,7 @@
                     <ul class="nav nav-tabs nav-tabs-aura" id="myTab-mobile" role="tablist">
                         {% for index,store in stores %}
                         <li class="nav-item">
-                            <a class="nav-link nav-tab-product {{index == 0?'active':''}}"
+                            <a class="nav-link nav-tab-product {{index == 0?'active':''}} {{store.status !=1?'disabled':''}}"
                                id="home{{index+1}}-mobile-tab"
                                data-toggle="tab"
                                href="#home{{index+1}}-mobile"
@@ -33,7 +33,7 @@
                                  class="carousel carousel-working carousel-even slide carousel-even--active"
                                  data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                     {% for i in 0..(store.roomEventInfo[0]['images']|length - 1) %}
+                                    {% for i in 0..(store.roomEventInfo[0]['images']|length - 1) %}
                                     <li data-target="#carousel-home-mobile-{{index + 1}}" data-slide-to="{{i}}" class="{{i ==0?'active':''}}"></li>
                                     {% endfor %}
                                 </ol>
@@ -59,12 +59,12 @@
                                 <div class="p-4">
                                     {% if(store.roomEventInfo|length > 0)%}
                                     {{store.roomEventInfo[0].lang(language)['content']|raw}}
-                                {% endif %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="text-center w-100 mt-3">
-                                <a href="/{{language}}/dat-phong/{{store.slug}}" class="link_img">
-                                    <img src="{{'assets/images/btn_datphong.png'|theme}}" width="100" class="mx-auto" alt=""/>
+                                <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn_box_shadow float-right mt-3 btn-service">                        
+                                    {{ 'Đặt phòng'|_ }} <img class="ml-2" src="{{'assets/images/arr_link.png'|theme}}" alt=""/>
                                 </a>
                             </div>
                         </div>

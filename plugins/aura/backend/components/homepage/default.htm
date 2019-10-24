@@ -3,11 +3,21 @@
         <img src="{{'assets/images/icon-play.png'|theme}}" class="play-video"/>
         <img src="{{'assets/images/video-homepage.png'|theme}}" style="width:100%"/>
     </div>
+    <div class="w-100 video-intro" style='display: none'>
+        <video class='w-100' poster="{{'assets/images/video-homepage.png'|theme}}" playsinline autoplay muted loop>                                                       
+            <source src="{{'assets/file/Aura-District-Manifesto.mp4'|theme}}" type="video/mp4">
+        </video>
+    </div>
 </div>
 
-<div class="isMobile">
+<div class="isMobile">    
     <div class="embed-responsive embed-responsive-16by9">
-        <div id="player"></div>
+        <!--<div id="player"></div>-->
+        <div class="w-100">
+            <video poster="{{'assets/images/video-homepage.png'|theme}}" playsinline autoplay muted loop>                                                       
+                <source src="{{'assets/file/Aura-District-Manifesto.mp4'|theme}}" type="video/mp4">
+            </video>
+        </div>
     </div>
 </div>
 {% partial __SELF__~'::aura-district' %}

@@ -63,13 +63,12 @@ $(document).ready(function () {
         $('.tab').addClass('hidden');
         $('.' + type).removeClass('hidden');
     });
+    
+    $("body").delegate(".play-video", "click", function () {
+        $('.video-intro').show();
+        $('.banner').hide();
+    });
 
-    $("#carousel-home1").swiperight(function () {
-        $(this).carousel('prev');
-    });
-    $("#carousel-home2").swipeleft(function () {
-        $(this).carousel('next');
-    });
 
 
     var offset = 200;

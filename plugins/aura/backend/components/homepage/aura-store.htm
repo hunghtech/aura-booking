@@ -4,9 +4,14 @@
             {{ 'Đừng bỏ qua các Aura District gần bạn'|_ }}
         </h2>
         <div class="row">
-            {% for index,store in stores %}
+            {% for index,store in stores %}            
             <div class="col-sm-4 col-6 mb-4">
-                <div class="box-coming item">
+                {% if (store.status !=1)%}
+                <div class="text-commingsoon">
+                    <p>{{ 'Coming soon'|_ }}</p>
+                </div>
+                {% endif %}
+                <div class="box-coming item {{store.status !=1?'disabled':''}}">
                     <div class="img">
                         <img src="{{store.thumbnail.path}}" alt=""/>
                     </div>
@@ -16,9 +21,14 @@
                             <a href="/{{language}}/co-living">{{store.is_co_living == 1?'co-living':''}}</a>
                             <a href="/{{language}}/co-working">{{store.is_co_working == 1?'co-working':''}}</a>
                         </p>
-                        <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn-visit">
+                        <!--<a href="/{{language}}/dat-phong/{{store.slug}}" class="btn-visit">
                             <img src="{{'assets/images/btn_visit.png'|theme }}" alt=""/>
+                        </a>-->
+                        {% if (store.status ==1)%}
+                        <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn_box_shadow float-right mt-3">                        
+                            {{ 'Đặt ngay'|_ }} <img class="ml-2" src="{{'assets/images/arr_link.png'|theme}}" alt=""/>
                         </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

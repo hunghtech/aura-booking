@@ -6,10 +6,10 @@
                     Aura Him Lam
                 </h2>
                 <p class="mb-2">
-					{{ '1 – 3, đường D4, KDC Him Lam'|_ }},{{ 'P.Tân Hưng, Quận 7, TP.HCM, Việt Nam'|_ }}
+                    {{ '1 – 3, đường D4, KDC Him Lam'|_ }},{{ 'P.Tân Hưng, Quận 7, TP.HCM, Việt Nam'|_ }}
                 </p>
                 <p class="mb-5">
-					{{ 'Đăng ký sử dụng dịch vụ tại Aura District. Bộ phận CSKH của chúng tôi sẽ liên hệ với bạn trong
+                    {{ 'Đăng ký sử dụng dịch vụ tại Aura District. Bộ phận CSKH của chúng tôi sẽ liên hệ với bạn trong
                     24h để xác nhận thông tin.'|_ }}                    
                 </p>
                 <form action="" data-request="bookingRoom::onBookRoom" data-request-success="AURA.bookRoomSuccess()" class="form_input_date mb-5">
@@ -18,7 +18,7 @@
                         <select class="form-control select-aura" name="building_id" required="true">
                             <option value="">---Vui lòng chọn Aura---</option>
                             {% for store in stores %}
-                                <option {{aura == store.slug?"selected='true'":""}} value="{{store.id}}">{{store.name}}</option>
+                            <option {{aura == store.slug?"selected='true'":""}} value="{{store.id}}">{{store.name}}</option>
                             {% endfor %}
                         </select>
                     </div>

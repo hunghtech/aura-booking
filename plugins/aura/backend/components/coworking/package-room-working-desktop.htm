@@ -29,7 +29,7 @@
                     <ul class="nav nav-tabs nav-tabs-aura" id="myTabWorking" role="tablist">
                         {% for index,store in stores %}
                         <li class="nav-item">
-                            <a class="nav-link nav-tab-working {{index == 0?'active':''}}"
+                            <a class="nav-link nav-tab-working {{index == 0?'active':''}} {{store.status !=1?'disabled':''}}"
                                id="home{{index+1}}-tab-working"
                                data-toggle="tab"
                                href="#home{{index+1}}-working"
@@ -58,8 +58,8 @@
                             <div class="row">
                                 <div class="col-6"></div>
                                 <div class="col-6 text-right">
-                                    <a href="/{{language}}/dat-phong/{{store.slug}}" class="link_img link_img--right">
-                                        <img src="{{'assets/images/btn_datphong.png'|theme}}" alt=""/>
+                                    <a href="/{{language}}/dat-phong/{{store.slug}}" class="btn_box_shadow float-right mt-3 btn-service">                        
+                                        {{ 'Đặt phòng'|_ }} <img class="ml-2" src="{{'assets/images/arr_link.png'|theme}}" alt=""/>
                                     </a>
                                 </div>
                             </div>

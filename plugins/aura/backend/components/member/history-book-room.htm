@@ -1,5 +1,6 @@
 <div class="content_phongdadat mb-5">
     <div class="table-responsive">
+        {% if(bookRooms|length > 0)%}
         <table class="table_status">
             <tr>
                 <th>{{ 'Building'|_ }}</th>
@@ -23,5 +24,8 @@
             {% endfor %}
 
         </table>
+        {% else %}
+            <p>{{ 'Hiện tại chưa có lịch sử đặt phòng'|_ }}</p>
+        {% endif %}
     </div>
 </div>
