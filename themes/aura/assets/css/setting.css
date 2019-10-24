@@ -454,7 +454,7 @@ body.loaded .loading_page {
         border-bottom: 2px solid #000;
     }
     .carousel_content{
-        background-size: 120% 65%;
+        background-size: 120% 70%;
     }
     .pic_inner img{
         clip-path: polygon(10% 0, 100% 0, 100% 80%, 30% 100%);
