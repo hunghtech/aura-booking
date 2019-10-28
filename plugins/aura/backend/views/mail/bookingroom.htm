@@ -1,0 +1,63 @@
+subject = "Thông tin đặt phòng"
+description = "Thông tin đặt phòng"
+==
+<h2 class="title" style="margin-bottom:35px;margin-top: 25px;font-size: 18px;text-transform: uppercase;">
+
+    Thông tin đặt phòng <span style="color:#c4903f">❖ Aura Booking</span> 
+
+</h2>
+
+<table width="100%">
+
+    <tr style="height:30px">
+
+        <td width="150px"> <b>Họ & tên : </b> </td>
+
+		{% if(data.userInfo[0].surname)%}
+			<td width="250px"> {{data.userInfo[0].surname}} {{data.userInfo[0].name}}</td>
+		{% else %}
+			<td width="250px"> {{data.userInfo[0].name}}</td>
+		{% endif %}        
+
+    </tr>
+
+    <tr style="height:30px">
+
+        <td width="150px"> <b>Email : </b> </td>
+
+        <td width="250px"> {{data.userInfo[0].email}}</td>
+
+    </tr>
+    <tr style="height:30px">
+
+        <td width="150px"> <b>Aura : </b> </td>
+
+        <td width="250px"> {{data.buildingInfo[0].name}}</td>
+
+    </tr>	
+    {% if(data.is_unknown_date == 1)%}
+        <tr style="height:30px">
+
+            <td width="150px"> <b>Chú thích : </b> </td>
+
+            <td width="250px"> Chưa rõ ngày đến và ngày đi</td>
+
+        </tr>
+    {% else %}
+        <tr style="height:30px">
+
+            <td width="150px"> <b>Ngày đến : </b> </td>
+
+            <td width="250px"> {{data.from_date}}</td>
+
+        </tr>	
+        <tr style="height:30px">
+
+            <td width="150px"> <b>Ngày đi : </b> </td>
+
+            <td width="250px"> {{data.to_date}}</td>
+
+        </tr>
+    {% endif %}       
+
+</table>

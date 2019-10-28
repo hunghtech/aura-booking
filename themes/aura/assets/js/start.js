@@ -5,10 +5,16 @@ $(document).ready(function () {
     var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
     $('.datepicker').datepicker({
+		format: "dd-mm-yyyy",
         onRender: function (date) {
             return date.valueOf() < now.valueOf() ? 'disabled' : '';
-        }
+        },
+		autoHide: true
     });
+	
+	$('.datepicker').on('changeDate', function(ev){
+		$(this).datepicker('hide');
+	});
     new WOW().init();
     AURA.openNav();
     AURA.closeNav();
@@ -92,11 +98,13 @@ $(document).ready(function () {
 });
 
 AURA.bookRoomSuccess = function () {
-    swal({
-        title: "Thông báo!",
-        text: "Đặt phòng thành công! Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của Aura!",
-        type: "success"
-    });
+	swal({
+		 title: "Thông báo!",
+		text: "Đặt phòng thành công! Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của Aura!",
+		type: "success"
+	}, function() {
+		$('#bookingRoom')[0].reset();
+	});
 }
 
 AURA.errorSignin = function (jqXHR)
@@ -108,7 +116,13 @@ AURA.errorRegister = function (jqXHR)
     $('.error-register').show();
 }
 
+AURA.loading = function ()
+{
+    $("body").removeClass('loaded');
+}
+
 AURA.registerSuccess = function () {
+	$("body").addClass('loaded');
     swal({
         title: "Thông báo!",
         text: "Đăng ký thành công!",
