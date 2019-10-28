@@ -331,23 +331,28 @@
 /*Footer*/
 .box_animate_foo{
     width: 50%;
+	bottom:90px;
 }
 .box_animate_foo .pos-relative{
     height: 320px;
     overflow-x: visible;
+}
+.footer_page .img_mk{
+	bottom:-15px;
+	width: 55%;
 }
 @keyframes a {
     0% {
         left: -10%;
         visibility: visible;
     }
-    60% {
+    70% {
         opacity: 1;
     }
-    65% {
+	75% {
         opacity: 0.1;
     }
-    70% {
+    80% {
         opacity: 0;
     }
 
@@ -466,8 +471,11 @@ body.loaded .loading_page {
         height: 300px;
     }
     .embed-responsive{
-        height: 530px;
+        height: 540px;
     }
+	.embed-responsive video{		
+		top: 30px;		
+	}
     .my-5, .mt-5, .pt-5{
         margin-top:0px !important;
         margin-bottom:0 !important;
@@ -527,6 +535,9 @@ body.loaded .loading_page {
     }
 	.contain_subscribe h2, .contain_subscribe--form{
 		z-index:99999;
+	}
+	.footer_page .img_mk{
+		bottom:0px;
 	}
 }
 
