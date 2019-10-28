@@ -296,6 +296,9 @@
     right: -50px;
     top: -3px;
 }
+.item_drs_dichvu img{
+	max-width:35px !important;
+}
 
 /*Co-Working*/
 
@@ -522,6 +525,9 @@ body.loaded .loading_page {
     .list_contain_slogan .carousel_home .contain-item .caption_inner{
         min-height: 350px;
     }
+	.contain_subscribe h2, .contain_subscribe--form{
+		z-index:99999;
+	}
 }
 
 @media (max-width: 991px){
